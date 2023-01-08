@@ -1,0 +1,60 @@
+.background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    -webkit-filter: blur(6px);
+    filter: blur(6px);
+}
+.background > img{
+    position: absolute;
+}
+.background > img:nth-child(1){
+    position: absolute;
+    width: 100px;
+    animation: ani--up--down infinite linear 1s .2s alternate-reverse;
+    left: 15%;
+    top: 15%;
+}
+.background > img:nth-child(2){
+    width: 100px;
+    left: 7%;
+    top: 70%;
+    animation: ani--left--right infinite linear 1s .4s alternate-reverse
+}
+.background > img:nth-child(3){
+    width: 100px;
+    right: 15%;
+    top: 5%;
+    animation: ani--rihgt--left infinite linear 1s alternate-reverse
+}
+.background > img:nth-child(4){
+    width: 100px;
+    right: 25%;
+    top: 75%;
+    animation: ani--up--down infinite linear 1s alternate-reverse
+}
+
+@keyframes ani--up--down {
+    0%{
+        transform: translateY(3px);
+    }
+    100%{
+        transform: translateY(-3px);
+    }
+}
+@keyframes ani--left--right {
+    0%{
+        transform: translate(3px,3px);
+    }
+    100%{
+        transform: translate(-3px,-3px);
+    }
+}
+@keyframes ani--rihgt--left {
+    100%{
+        transform: translate(3px,3px);
+    }
+    0%{
+        transform: translate(-3px,-3px);
+    }
+}

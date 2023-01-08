@@ -1,6 +1,7 @@
 
 {
-    let state = false;
+    let state = true;
+    const hambuger__links = document.querySelectorAll('.hamburger__link > a');
     const hambuger__menu = document.querySelector(".hamburger__menu");
     const hambuger__menu__bg = document.querySelector(".hamburger__menu__bg");
     const showHamburgerMenu = state => {
@@ -19,10 +20,28 @@
             hambuger__menu.style.animationDelay = ".2s";
         }
     }
+    const showHamburgerLinks = state => {
+        if(state){
+            setTimeout(() => {
+                for (let i = 0; i < hambuger__links.length; ++i) {
+                    setTimeout(
+                        () => hambuger__links[i].classList.add('hamburger__link--show')
+                        , (i + 1) * 100)
+                }
+            }, 400)
+        }else{
+                for (let i = 0; i < hambuger__links.length; ++i) {
+                    setTimeout(
+                        () => hambuger__links[i].classList.remove('hamburger__link--show')
+                        , (i + 1) * 100)
+                }
+        }
+    }
     const menu__icon = document.querySelector('.menu__icon');
     menu__icon.addEventListener('click', () => {
-        console.log(!state);
-        if (!state) {
+        showHamburgerMenu(state);
+        showHamburgerLinks(state);
+        if (state) {
             menu__icon.children[0].style.transform = 'rotate(135deg) translateX(25px)';
             menu__icon.children[2].style.transform = 'rotate(-135deg) translateX(25px)';
             menu__icon.children[1].style.opacity = 0;
@@ -30,8 +49,7 @@
             menu__icon.children[2].style.left = "20px";
             menu__icon.children[0].style.backgroundColor = "white";
             menu__icon.children[2].style.backgroundColor = "white";
-            state = true;
-            showHamburgerMenu(state);
+            state = false;
         } else {
             menu__icon.children[0].style.transform = '';
             menu__icon.children[2].style.transform = '';
@@ -40,9 +58,7 @@
             menu__icon.children[2].style.left = "0";
             menu__icon.children[0].style.backgroundColor = "";
             menu__icon.children[2].style.backgroundColor = "";
-            state = false;
-            showHamburgerMenu(state);
+            state = true;
         }
     })
 }
-

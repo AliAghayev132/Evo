@@ -1,6 +1,7 @@
 @import '../css/root.css';
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 @import url('./components/header.css');
+@import url('./components/background.css');
 
 @font-face {
     font-family: 'Gilroy';
@@ -56,50 +57,9 @@
     }
 }
 
-.background {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    -webkit-filter: blur(1px);
-    /* Safari 6.0 - 9.0 */
-    filter: blur(6px);
-}
-.background > img{
-    position: absolute;
-}
-.background > img:nth-child(1){
-    position: absolute;
-    width: 100px;
-    right: 45%;
-    animation: ani--up--down infinite 1s .2s alternate-reverse;
-    bottom: 50px;
-}
-.background > img:nth-child(2){
-    width: 100px;
-    left: 70px;
-    bottom: 60%;
-    animation: ani--left--right infinite 1s .4s alternate-reverse
-}
-.background > img:nth-child(3){
-    width: 100px;
-    right: 200px;
-    top: 120px;
-    animation: ani--up--down infinite 1s alternate-reverse
-}
 
-@keyframes ani--up--down {
-    0%{
-        transform: translateY(10px);
-    }
-    100%{
-        transform: translateY(-10px);
-    }
-}
-@keyframes ani--left--right {
-    0%{
-        transform: translate(10px,10px);
-    }
-    100%{
-        transform: translate(-10px,-10px);
+@media only screen and (max-width: 660px) {
+    .home__text{
+        text-align: center;
     }
 }
