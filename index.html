@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/index.css">
+
     <title>Ana Səhifə</title>
 
 </head>
@@ -67,10 +68,10 @@
             </div>
         </div>
     </header>
-    
+
     <div class="container">
         <main>
-            <section class="home__section">
+            <section class="home__section page-item">
                 <div class="home__content">
                     <h2 class="home__title">
                         Evo
@@ -80,14 +81,43 @@
                     <p class="home__text">Salam necəsiz dostlar</p>
                 </div>
             </section>
-            <section class="about">
-
+            <section class="about__section page-item">
+                <div class="about__left">
+                    <div class="about__title">
+                        Biz kimik Ala?
+                    </div>
+                    <div class="about__description">
+                        Sözün açığı sağdaki uzun saç qaqaş mənəm.
+                        Solumdaki EVO MMC nin Allahıdır.
+                        Profilinə Ayı şəkli qoyanda hərşeyin Amina qoyan Ceyhundur.
+                    </div>
+                </div>
+                <div class="about__right">
+                    <div class="about__content">
+                        <div class="about__right__image">
+                            <img src="./src/images/ilqar.jpeg">
+                        </div>
+                        <div class="about__right__image" style="justify-content: flex-end;">
+                            <img src="./src/images/ceyhun.jpg">
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer></footer>
     </div>
     <script src="./src/javascript/hamburger.js"></script>
     <script src="./src/javascript/dynamictext.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollpage-js/scrollpage.js"></script>
+    <!-- <script src="./scrollpage.js"></script> -->
+    <script>
+        const scrollPage = new ScrollPage(".container", {
+            time: 1000, //default 500
+            scrollBar: true,//show or hide scrollbar (default false),
+            pageSelectedClass: "active",//css class name for page element if active or selected (default 'active')
+            menuSelectedClass: "active",//css class name for menu element if active or selected (default 'active')
+        });
+    </script>
 </body>
 
 </html>

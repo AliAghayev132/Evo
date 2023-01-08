@@ -4,6 +4,7 @@ header {
     position: fixed;
     width: 100%;
     background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.832);    
     padding: 0 5%;
     z-index: 3;
 }
@@ -72,9 +73,11 @@ header {
     opacity: 1;
     width: 20%;
 }
-.nav__left{
+
+.nav__left {
     width: 10%;
 }
+
 .nav__mid {
     justify-content: center;
     display: flex;
@@ -152,9 +155,9 @@ header {
         padding: 15px 10px;
     }
 
-    .nav__right  .fa-facebook-f,
-    .nav__right  .fa-instagram,
-    .nav__right  .fa-youtube {
+    .nav__right .fa-facebook-f,
+    .nav__right .fa-instagram,
+    .nav__right .fa-youtube {
         display: none;
     }
 }
@@ -293,30 +296,36 @@ header {
         border-bottom-left-radius: 100%;
     }
 }
-.hamburger__link  i:hover::before {
+
+.hamburger__link i:hover::before {
     background: none;
     background-color: transparent;
 }
 
-.hamburger__link a{
+.hamburger__link a {
     transform: translateX(-100px);
+    user-select: none;
+    /* Thank You Azad  08.01.2023 || 19:56*/
     transition: .2s;
     opacity: 0;
 }
-.hamburger__link--show{
-    transform: none!important;
-    opacity: 1!important;
+
+.hamburger__link--show {
+    transform: none !important;
+    opacity: 1 !important;
 }
-.hamburger__icons{
+
+.hamburger__icons {
     margin-top: 35px;
     gap: 20px;
     align-items: center;
     display: flex;
 }
-.hamburger__icons > i {
+
+.hamburger__icons>i {
     cursor: pointer;
 }
-.hamburger__icons > .fa-location-pin {
+
+.hamburger__icons>.fa-location-pin {
     font-size: 1em;
 }
-
