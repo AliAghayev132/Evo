@@ -1,0 +1,79 @@
+@import url('../icons/brands.css');
+@import url('../icons/solid.css');
+:root{
+    --evo--color:#3E57E8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    /* --bs-gutter-x: 0; */
+    /* --bs-gutter-y: 0; */
+    position: relative;
+    width: 100%;
+    /* padding-right: calc(var(--bs-gutter-x) * 0.5); */
+    /* padding-left: calc(var(--bs-gutter-x) * 0.5); */
+}
+
+/* @media (min-width: 576px) {
+
+    .container-sm,
+    .container {
+        max-width: 540px;
+    }
+}*/
+
+/* @media (min-width: 200px) {
+
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 720px;
+    }
+} */
+
+/* @media (min-width: 992px) {
+
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1320px;
+    }
+} */
