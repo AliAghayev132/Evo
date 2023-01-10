@@ -201,7 +201,99 @@
 /* #endregion */
 
 
-/* #region language */
+/* #region Educatio Section */
+.education__section {
+    padding: 20px 50px;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+}
+
+.education__title {
+    position: relative;
+    font-family: Gilroy;
+    display: inline-block;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.education__title::before {
+    background-color: var(--evo--color);
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 100%;
+    bottom: -5px;
+}
+
+.education__content {
+    padding-top: 10%;
+    justify-content: center;
+    display: flex;
+}
+
+.education_courses {
+    text-align: center;
+    border: 10px solid gray;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    position: relative;
+    animation: education__rotate 20s infinite linear;
+}
+
+.education__course {
+    color: white;
+    background-color: var(--evo--color);
+    font-family: 'Space Mono', monospace;
+    position: absolute;
+    font-size: 1.5vw;
+    height: 100px;
+    line-height: 100px;
+    width: 250px;
+    animation: education__rotate--opp 20s infinite linear;
+    transform-origin: center;
+}
+
+.education__course:nth-child(1) {
+    left: calc(50% - 125px);
+    top: calc(0% - 55px);
+}
+
+.education__course:nth-child(2) {
+    left: calc(0% - 125px);
+    top: calc(50% - 55px);
+}
+
+.education__course:nth-child(3) {
+    left: calc(100% - 125px);
+    top: calc(50% - 55px);
+}
+
+.education__course:nth-child(4) {
+    left: calc(50% - 125px);
+    top: calc(100% - 45px);
+}
+
+@keyframes education__rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes education__rotate--opp {
+    0% {
+        transform: rotate(0);
+
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
 
 /* #endregion */
-/*  */
