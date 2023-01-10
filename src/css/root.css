@@ -3,6 +3,10 @@
 
 :root {
     --evo--color: #3E57E8;
+    --card-color1:#4B3F72;
+    --card-color2:#ffc857;
+    --card-color3:#119da4;
+    --card-color4:#19647e;
 }
 
 * {

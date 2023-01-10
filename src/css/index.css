@@ -131,17 +131,45 @@
 .about__right__image {
     width: 100%;
     display: flex;
+    position: relative;
+    perspective: 1500px;
+}
+
+.about__right__image::before {
+    position: absolute;
+    perspective: 1500px;
+    content: '';
+    top: -50px;
+    right: 50px;
+    background-image: url('../images/pattern-1.png');
+    border-radius: 0.375em;
+    height: 100px;
+    animation: rotate360 infinite 10s linear;
+    width: 100px;
+}
+@keyframes rotate360 {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.about__right__image>img:hover {
+    perspective: 0;
+    transform: rotate(0);
 }
 
 .about__right__image>img {
     object-fit: cover;
-    width: 50%;
+    transform: rotateX(20deg) rotateY(-15deg) rotateZ(6deg);
+    border-radius: 0.375em;
+    box-shadow: 2px 10px 30px hsla(0, 0%, 0%, 0.25);
+    transition: .3s;
+    width: 90%;
     position: relative;
     box-shadow: -10px -10px 1px var(--evo--color);
-}
-
-.about__right__image:nth-child(2)>img {
-    box-shadow: 10px 10px 1px var(--evo--color);
 }
 
 @media only screen and (max-width: 970px) {
@@ -182,9 +210,13 @@
 }
 
 @media only screen and (max-width: 970px) {
+    .about__section {
+        height: auto;
+    }
+
     .about__content {
         flex-direction: column;
-        gap: 10p;
+        gap: 10px;
     }
 
     .about__right__image {
@@ -204,7 +236,10 @@
 /* #region Educatio Section */
 .education__section {
     padding: 20px 50px;
-    height: 100vh;
+    z-index: 2;
+    background-size: cover;
+    /* background-color: rgb(34,34,34); */
+    /* height: 100vh; */
     text-align: center;
     width: 100%;
 }
@@ -227,73 +262,113 @@
 }
 
 .education__content {
-    padding-top: 10%;
+    padding-top: 5%;
     justify-content: center;
     display: flex;
+    font-family: 'Space Mono', monospace;
 }
 
 .education_courses {
-    text-align: center;
-    border: 10px solid gray;
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    position: relative;
-    animation: education__rotate 20s infinite linear;
+    display: grid;
+    width: 90%;
+    gap: 50px;
+    justify-content: center;
+    grid-template-columns: repeat(4, 250px);
 }
 
 .education__course {
-    color: white;
-    background-color: var(--evo--color);
-    font-family: 'Space Mono', monospace;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    font-size: 1.5em;
+    height: 300px;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 900;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid gray;
+    position: relative;
+    transition: .3s;
+}
+
+.education__course:hover>.education__course__description {
+    left: 0;
+}
+
+.education__course__description {
+    transition: .3s;
     position: absolute;
-    font-size: 1.5vw;
-    height: 100px;
-    line-height: 100px;
-    width: 250px;
-    animation: education__rotate--opp 20s infinite linear;
-    transform-origin: center;
+    z-index: 5;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 100%;
+    width: 100%;
+}
+
+.education__course:nth-child(1)>.education__course__description {
+    color: white;
+    background-color: var(--card-color1);
+}
+
+.education__course:nth-child(2)>.education__course__description {
+    color: white;
+    background-color: var(--card-color2);
+}
+
+.education__course:nth-child(3)>.education__course__description {
+    color: white;
+    background-color: var(--card-color3);
+}
+
+.education__course:nth-child(4)>.education__course__description {
+    color: white;
+    background-color: var(--card-color4);
 }
 
 .education__course:nth-child(1) {
-    left: calc(50% - 125px);
-    top: calc(0% - 55px);
+    color: var(--card-color1);
 }
 
 .education__course:nth-child(2) {
-    left: calc(0% - 125px);
-    top: calc(50% - 55px);
+    color: var(--card-color2);
 }
 
 .education__course:nth-child(3) {
-    left: calc(100% - 125px);
-    top: calc(50% - 55px);
+    color: var(--card-color3);
 }
 
 .education__course:nth-child(4) {
-    left: calc(50% - 125px);
-    top: calc(100% - 45px);
+    color: var(--card-color4);
 }
 
-@keyframes education__rotate {
-    0% {
-        transform: rotate(0);
+.education__course__image {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    height: 100px;
+    width: 80%;
+}
+
+.education__course__image>img {
+    object-fit: contain;
+    height: 100%;
+}
+
+@media only screen and (max-width: 970px) {
+    .education__section {
+        height: auto;
     }
 
-    100% {
-        transform: rotate(360deg);
+    .education__title {
+        font-size: 11vw;
     }
 }
 
-@keyframes education__rotate--opp {
-    0% {
-        transform: rotate(0);
+@media only screen and (max-width: 560px) {}
 
-    }
-
-    100% {
-        transform: rotate(-360deg);
-    }
-}
 
 /* #endregion */
