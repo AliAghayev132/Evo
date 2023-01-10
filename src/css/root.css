@@ -3,10 +3,10 @@
 
 :root {
     --evo--color: #3E57E8;
-    --card-color1:#4B3F72;
-    --card-color2:#ffc857;
-    --card-color3:#119da4;
-    --card-color4:#19647e;
+    --card-color1:#F72585;
+    --card-color2:#4CC9F0;
+    --card-color3:#4361EE;
+    --card-color4:#7209B7;
 }
 
 * {
@@ -58,4 +58,12 @@ html {
     .scroll {
         display: none;
     }
+}
+canvas{
+    /* margin-top: 5%; */
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    /* transform: translateX(-25px); */
 }
