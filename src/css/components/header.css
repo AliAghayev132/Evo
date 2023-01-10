@@ -4,7 +4,7 @@ header {
     position: fixed;
     width: 100%;
     background-color: transparent;
-    background-color: rgba(255, 255, 255, 0.832);    
+    background-color: rgba(255, 255, 255, 0.832);
     padding: 0 5%;
     z-index: 3;
 }
@@ -143,6 +143,10 @@ header {
 }
 
 @media only screen and (max-width: 790px) {
+    .nav__right {
+        gap: 10px;
+    }
+
     .fa-location-pin {
         font-size: 2em;
     }
@@ -180,6 +184,10 @@ header {
 }
 
 @media only screen and (max-width: 740px) {
+    .language {
+        display: none;
+    }
+
     .hamburger__menu {
         display: block;
     }
@@ -328,4 +336,11 @@ header {
 
 .hamburger__icons>.fa-location-pin {
     font-size: 1em;
+}
+
+.language {
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-family: Gilroy;
+    /* font-family: 'Space Mono', monospace; */
 }
