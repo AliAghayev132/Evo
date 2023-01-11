@@ -1,3 +1,5 @@
+const colors = ["#3E57E8","#F72585","#4CC9F0","#4361EE","#7209B7"];
+
 const canvas = document.querySelector('.circlecanvas'),
     ctx = canvas.getContext('2d'),
     drawArc = par => {
@@ -48,7 +50,7 @@ class Circle {
 
 let circles = [];
 for (let i = 0; i < 100; ++i) {
-    circles.push(new Circle(random(0, canvas.width), random(0, canvas.height), random(1, 4)));
+    circles.push(new Circle(random(0, canvas.width), random(0, canvas.height), random(1, 4),colors[random(0,5)]));
 }
 
 function animate() {
