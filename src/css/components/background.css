@@ -6,6 +6,10 @@
     -webkit-filter: blur(6px);
     filter: blur(6px);
 }
+.circlecanvas{
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
 .background > img{
     position: absolute;
 }
