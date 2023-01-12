@@ -1,12 +1,20 @@
 @import url('../icons/brands.css');
 @import url('../icons/solid.css');
+@import url('./icofont.min.css');
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-ExtraBold.otf');
+}
 
 :root {
+    --fontcode: 'Gilroy';
     --evo--color: #3E57E8;
-    --card-color1:#F72585;
-    --card-color2:#4CC9F0;
-    --card-color3:#4361EE;
-    --card-color4:#7209B7;
+    --card-color1: #F72585;
+    --card-color2: #4CC9F0;
+    --card-color3: #4361EE;
+    --card-color4: #7209B7;
+    --bg-color1: #F1F1F1;
 }
 
 * {
@@ -25,14 +33,17 @@
 ::-webkit-scrollbar {
     width: 0;
 }
+
 /* Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #888;
 }
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
@@ -59,7 +70,8 @@ html {
         display: none;
     }
 }
-canvas{
+
+canvas {
     /* margin-top: 5%; */
     width: 100%;
     bottom: 0;

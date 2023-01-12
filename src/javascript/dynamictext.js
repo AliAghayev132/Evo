@@ -33,7 +33,7 @@ function startDynamicText(par) {
             if (text == "") {
                 state = true;
             } else {
-                text = text.substring(0, text.length - 2);
+                text = text.substring(0, text.length - 1);
                 dynamic__text.textContent = text + "|";
             }
         }

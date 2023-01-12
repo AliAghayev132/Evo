@@ -3,10 +3,7 @@
 @import url('./components/header.css');
 @import url('./components/background.css');
 
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-ExtraBold.otf');
-}
+
 
 .home__section {
     position: relative;
@@ -237,151 +234,176 @@
 
 /* #region Educatio Section */
 .education__section {
-    padding: 20px 50px;
-    z-index: 2;
-    background-size: cover;
-    /* background-color: rgb(34,34,34); */
-    overflow: hidden;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    display: flex;
-    height: 100vh;
-    text-align: center;
-    width: 100%;
+    background-color: var(--bg-color1);
+    padding: 50px 0;
 }
 
 .education__title {
-    position: relative;
-    font-family: Gilroy;
-    display: inline-block;
+    font-family: var(--fontcode);
+    font-size: 5vw;
     text-align: center;
-    font-size: 4vw;
-}
-
-.education__title::before {
-    background-color: var(--card-color4);
-    position: absolute;
-    content: '';
-    height: 10px;
-    width: 100%;
-    bottom: -5px;
 }
 
 .education__content {
-    padding-top: 5%;
-    justify-content: center;
-    padding-bottom: 300px;
-    display: flex;
-    font-family: 'Space Mono', monospace;
+    padding-top: 25px;
 }
 
-.education_courses {
-    display: grid;
-    width: 90%;
-    gap: 50px;
-    justify-content: center;
-    grid-template-columns: repeat(4, 300px);
+.education__carousel {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.education__course {
-    box-shadow: 0 0 10px rgb(223, 236, 248);
-    background-color: white;
-    padding: 20px 0;
+.education__cards {
     display: flex;
-    font-size: 1.9em;
-    height: 300px;
-    align-items: center;
-    flex-direction: column;
-    font-weight: 900;
     overflow: hidden;
-    cursor: pointer;
-    border: 3px solid gray;
-    position: relative;
+    justify-content: center;
+    gap: 20px;
+}
+
+.education__card {
+    overflow: hidden;
+    width: 300px;
+    padding: 20px;
+    display: inline-block;
+    background-color: white;
     transition: .3s;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
 }
 
-.education__course:hover {
-    transform: translateY(-40px);
-}
-
-.education__course:hover>.education__course__description {
+.education__card::after {
+    transform: scale(0);
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-radius: 50%;
+    width: 100%;
+    z-index: 1;
+    transition: .4s;
+    top: 0;
     left: 0;
 }
 
-.education__course__description {
-    transition: .3s;
-    position: absolute;
-    z-index: 5;
+.education__image {
+    position: relative;
+    z-index: 3;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100px;
+    justify-content: center;
     align-items: center;
     display: flex;
-    height: 100%;
-    background-color: white;
-    top: 0;
-    left: 100%;
-    width: 100%;
 }
 
-.education__course:nth-child(1)>.education__course__description {
+.education__card__title {
+    position: relative;
+    z-index: 3;
+    margin-top: 20px;
+    font-family: 'Space Mono', monospace;
+    user-select: none;
+    transition: .4s;
+    font-size: 1em
+}
+
+.icofont-computer,
+.icofont-smart-phone,
+.icofont-code,
+.icofont-bug,
+.icofont-game-pad {
     color: white;
+    font-size: 5em;
+}
+
+
+.education__card:nth-child(1) .education__image {
     background-color: var(--card-color1);
 }
 
-.education__course:nth-child(2)>.education__course__description {
-    color: white;
+.education__card:nth-child(2) .education__image {
     background-color: var(--card-color2);
 }
 
-.education__course:nth-child(3)>.education__course__description {
-    color: white;
+.education__card:nth-child(3) .education__image {
     background-color: var(--card-color3);
 }
 
-.education__course:nth-child(4)>.education__course__description {
-    color: white;
+.education__card:nth-child(4) .education__image {
     background-color: var(--card-color4);
 }
 
-.education__course:nth-child(1) {
-    color: var(--card-color1);
+.education__card:nth-child(5) .education__image {
+    background-color: var(--evo--color);
 }
 
-.education__course:nth-child(2) {
-    color: var(--card-color2);
+
+.education__card:nth-child(1):hover::after{
+    transform: scale(1);
+    background-color: var(--card-color1);
+    border-radius: 0%;
+
+}
+.education__card:nth-child(1):hover .education__card__title{
+    color: white;
+}
+.education__card:nth-child(2):hover::after{
+    transform: scale(1);
+    border-radius: 0%;
+
+    background-color: var(--card-color2);
+}
+.education__card:nth-child(2):hover .education__card__title{
+    color: white;
+}
+.education__card:nth-child(3):hover::after{
+    border-radius: 0%;
+    transform: scale(1);
+
+    background-color: var(--card-color3);
+}
+.education__card:nth-child(3):hover .education__card__title{
+    color: white;
+}
+.education__card:nth-child(4):hover::after{
+    transform: scale(1);
+    border-radius: 0%;
+    background-color: var(--card-color4);
+}
+.education__card:nth-child(4):hover .education__card__title{
+    color: white;
+}
+.education__card:nth-child(5):hover::after{
+    border-radius: 0%;
+    transform: scale(1);
+    background-color: var(--evo--color);
+}
+.education__card:nth-child(5):hover .education__card__title{
+    color: white;
 }
 
-.education__course:nth-child(3) {
-    color: var(--card-color3);
+/* .education__card:nth-child(2):hover {
+    color: white;
+    background-color: var(--card-color2)
 }
 
-.education__course:nth-child(4) {
-    color: var(--card-color4);
+.education__card:nth-child(3):hover {
+    color: white;
+    background-color: var(--card-color3)
 }
 
-.education__course__image {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    height: 100px;
-    width: 80%;
+.education__card:nth-child(4):hover {
+    color: white;
+    background-color: var(--card-color4)
 }
 
-.education__course__image>img {
-    object-fit: contain;
-    height: 100%;
-}
+.education__card:nth-child(5):hover {
+    color: white;
+    background-color: var(--evo--color)
+} */
 
-@media only screen and (max-width: 970px) {
-    .education__section {
-        height: auto;
-    }
-
-    .education__title {
-        font-size: 11vw;
-    }
-}
-
-@media only screen and (max-width: 560px) {}
 
 
 /* #endregion */

@@ -1,10 +1,11 @@
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    checkSizes();
     initCircles();
 })
 
-
+let circlesSizes = 100;
 const colors = ["#3E57E8", "#F72585", "#4CC9F0", "#4361EE", "#7209B7"];
 const canvas = document.querySelector('.circlecanvas'),
     ctx = canvas.getContext('2d'),
@@ -58,7 +59,7 @@ class Circle {
 let circles = [];
 function initCircles() {
     circles = [];
-    for (let i = 0; i < 100; ++i) {
+    for (let i = 0; i < circlesSizes; ++i) {
         circles.push(new Circle(random(0, canvas.width), random(0, canvas.height), random(1, 4), colors[random(0, 5)]));
     }
 }
@@ -76,3 +77,17 @@ function animate() {
 animate();
 
 
+
+function checkSizes() {
+    if (window.innerWidth > 1000)
+        circlesSizes = 100;
+    else if (window.innerWidth > 800)
+        circlesSizes = 80;
+    else if (window.innerWidth > 600)
+        circlesSizes = 60;
+    else if (window.innerWidth > 400)
+        circlesSizes = 40;
+    else
+        circlesSizes = 20;
+}
+checkSizes();
