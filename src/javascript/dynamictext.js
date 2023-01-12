@@ -43,6 +43,6 @@ function startDynamicText(par) {
 startDynamicText(
     {
         class: ".home__text",
-        texts: ["Həzrəti İlqar", "CEYHUN: AMINA QOYUM", "Time is Passing", "Zort Ali", "The Future is Here", "Mən kişiyəm"]
+        texts: ["Həzrəti İlqar", "Time is Passing", "Zort Ali", "The Future is Here"]
     }
 )

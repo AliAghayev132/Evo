@@ -1,5 +1,11 @@
-const colors = ["#3E57E8","#F72585","#4CC9F0","#4361EE","#7209B7"];
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initCircles();
+})
 
+
+const colors = ["#3E57E8", "#F72585", "#4CC9F0", "#4361EE", "#7209B7"];
 const canvas = document.querySelector('.circlecanvas'),
     ctx = canvas.getContext('2d'),
     drawArc = par => {
@@ -36,6 +42,7 @@ class Circle {
             if (Math.sqrt((i.x - this.x) * (i.x - this.x) + (i.y - this.y) * (i.y - this.y)) < 100) {
                 ctx.beginPath();
                 ctx.strokeStyle = 'black';
+                ctx.lineWidth = 0.05;
                 ctx.moveTo(this.x, this.y);
                 ctx.lineTo(i.x, i.y);
                 ctx.stroke();
@@ -49,9 +56,13 @@ class Circle {
 }
 
 let circles = [];
-for (let i = 0; i < 100; ++i) {
-    circles.push(new Circle(random(0, canvas.width), random(0, canvas.height), random(1, 4),colors[random(0,5)]));
+function initCircles() {
+    circles = [];
+    for (let i = 0; i < 100; ++i) {
+        circles.push(new Circle(random(0, canvas.width), random(0, canvas.height), random(1, 4), colors[random(0, 5)]));
+    }
 }
+initCircles();
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
