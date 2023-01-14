@@ -71,7 +71,7 @@ html {
     }
 }
 
-canvas {
+.circlecanvas {
     /* margin-top: 5%; */
     width: 100%;
     bottom: 0;

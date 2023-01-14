@@ -28,7 +28,7 @@ class Circle {
         this.c = c;
         let randomX = random(0, 2);
         let randomY = random(0, 2);
-        this.v = { x: random(1, 3) * (randomX === 1 ? 1 : -1), y: random(1, 3) * (randomY === 1 ? 1 : -1) };
+        this.v = { x: random(1, 2) * (randomX === 1 ? 1 : -1), y: random(1, 2) * (randomY === 1 ? 1 : -1) };
     }
     update(circles) { // x -> dir_x, y -> dir_y
         if (this.x + this.v.x > canvas.width - this.r * 2 || this.x < 0)

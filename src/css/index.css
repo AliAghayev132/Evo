@@ -383,6 +383,9 @@
 .education__card:nth-child(5):hover .education__card__title{
     color: white;
 }
+.batmancanvas{
+    margin-top: 10px;
+}
 
 /* .education__card:nth-child(2):hover {
     color: white;
