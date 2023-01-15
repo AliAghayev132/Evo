@@ -1,4 +1,6 @@
 import updateLangue from "./language.js";
+import startDynamicText from './dynamictext.js';
+// #region Language`
 {
     const btn = document.querySelector('.language');
     let state = "EN";
@@ -8,3 +10,10 @@ import updateLangue from "./language.js";
         btn.innerHTML = state;
     })
 }
+// #endregion
+startDynamicText(
+    {
+        className: ".home__text",
+        texts: ["Time is Passing", "The Future is Here"]
+    }
+)

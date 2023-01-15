@@ -11,5 +11,4 @@ export default function updateLangue(state) {
     fetch(`./src/languages/${state === 'EN' ? "english" : "russian"}.json`)
         .then(response => response.json())
         .then(data => loadText(data.texts))
-
 }

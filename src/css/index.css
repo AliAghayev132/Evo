@@ -245,31 +245,37 @@
 }
 
 .education__content {
+    overflow: hidden;
+    width: 100vw;
     padding-top: 25px;
 }
 
 .education__carousel {
     width: 80%;
     margin: 0 auto;
+    overflow: hidden;
+
 }
 
 .education__cards {
-    display: flex;
-    overflow: hidden;
+    width: auto;
     justify-content: center;
-    gap: 20px;
+    height: 220px;
+    position: relative;
 }
 
 .education__card {
     overflow: hidden;
-    width: 300px;
+    width: 250px;
+    height: 220px;
     padding: 20px;
     display: inline-block;
     background-color: white;
     transition: .3s;
+    left: 0;
     border-radius: 10px;
     text-align: center;
-    position: relative;
+    position: absolute;
     cursor: pointer;
 }
 
@@ -340,50 +346,60 @@
 }
 
 
-.education__card:nth-child(1):hover::after{
+.education__card:nth-child(1):hover::after {
     transform: scale(1);
     background-color: var(--card-color1);
     border-radius: 0%;
 
 }
-.education__card:nth-child(1):hover .education__card__title{
+
+.education__card:nth-child(1):hover .education__card__title {
     color: white;
 }
-.education__card:nth-child(2):hover::after{
+
+.education__card:nth-child(2):hover::after {
     transform: scale(1);
     border-radius: 0%;
 
     background-color: var(--card-color2);
 }
-.education__card:nth-child(2):hover .education__card__title{
+
+.education__card:nth-child(2):hover .education__card__title {
     color: white;
 }
-.education__card:nth-child(3):hover::after{
+
+.education__card:nth-child(3):hover::after {
     border-radius: 0%;
     transform: scale(1);
 
     background-color: var(--card-color3);
 }
-.education__card:nth-child(3):hover .education__card__title{
+
+.education__card:nth-child(3):hover .education__card__title {
     color: white;
 }
-.education__card:nth-child(4):hover::after{
+
+.education__card:nth-child(4):hover::after {
     transform: scale(1);
     border-radius: 0%;
     background-color: var(--card-color4);
 }
-.education__card:nth-child(4):hover .education__card__title{
+
+.education__card:nth-child(4):hover .education__card__title {
     color: white;
 }
-.education__card:nth-child(5):hover::after{
+
+.education__card:nth-child(5):hover::after {
     border-radius: 0%;
     transform: scale(1);
     background-color: var(--evo--color);
 }
-.education__card:nth-child(5):hover .education__card__title{
+
+.education__card:nth-child(5):hover .education__card__title {
     color: white;
 }
-.batmancanvas{
+
+.batmancanvas {
     margin-top: 10px;
 }
 
@@ -406,6 +422,17 @@
     color: white;
     background-color: var(--evo--color)
 } */
+
+.reason__section {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.reason__title {
+    text-align: center;
+    font-size: 5vw;
+    font-family: var(--fontcode);
+}
 
 
 
