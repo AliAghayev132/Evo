@@ -1,5 +1,4 @@
 {
-    console.log(this.window.innerWidth);
     const canvas = document.querySelector('.batmancanvas'),
         ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;

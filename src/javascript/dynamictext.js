@@ -1,5 +1,4 @@
 import { $ } from "./custom.js";
-
 const startDynamicText = par => {
     const dynamic__text = $(par.className),
         texts = par.texts;
@@ -33,4 +32,3 @@ const startDynamicText = par => {
     }, 60);
 }
 export default startDynamicText;
-

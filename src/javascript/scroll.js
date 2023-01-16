@@ -7,7 +7,6 @@
     size = window_height / size;
     scroll.style.height = size - offset_y + 'px';
     const rect = scroll.getBoundingClientRect();
-
     let timer = null;
     document.addEventListener('scroll', e => {
         timer && clearTimeout(timer);

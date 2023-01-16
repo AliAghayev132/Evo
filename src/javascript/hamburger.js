@@ -1,24 +1,31 @@
+import { $ } from "./custom.js";
+export default function createHamburgerSystem() {
+
+
+
+}
 
 {
     let state = true;
-    const hambuger__links = document.querySelectorAll('.hamburger__link > a');
-    const hambuger__menu = document.querySelector(".hamburger__menu");
-    const hambuger__menu__bg = document.querySelector(".hamburger__menu__bg");
+    const hambuger__links = $('.hamburger__link > a');
+    const hambuger__menu = $(".hamburger__menu");
+    const hambuger__menu__bg = $(".hamburger__menu__bg");
     const showHamburgerMenu = state => {
         if (state) {
-            hambuger__menu.classList.add('hamburger--animation');
-            hambuger__menu__bg.classList.add('hamburger--animation');
-            hambuger__menu.classList.remove('hamburger--animation--close');
-            hambuger__menu__bg.classList.remove('hamburger--animation--close');
-            hambuger__menu__bg.style.animationDelay = ".2s";
+            hambuger__menu.setAttribute('class', 'hamburger__menu hamburger--animation');
+            hambuger__menu__bg.setAttribute('class', 'hamburger__menu__bg hamburger--animation');
+            
             hambuger__menu.style.animationDelay = "";
+            hambuger__menu__bg.style.animationDelay = ".2s";
         } else {
-            hambuger__menu.classList.add('hamburger--animation--close');
-            hambuger__menu__bg.classList.add('hamburger--animation--close');
+            hambuger__menu.setAttribute('class', 'hamburger__menu hamburger--animation--close');
+            hambuger__menu__bg.setAttribute('class', 'hamburger__menu__bg hamburger--animation--close');
+
             hambuger__menu__bg.style.animationDelay = "";
             hambuger__menu.style.animationDelay = ".2s";
         }
     }
+    
     const showHamburgerLinks = state => {
         if (state) {
             setTimeout(() => {
@@ -36,7 +43,7 @@
             }
         }
     }
-    const menu__icon = document.querySelector('.menu__icon');
+    const menu__icon = $('.menu__icon');
     menu__icon.addEventListener('click', () => {
         showHamburgerMenu(state);
         showHamburgerLinks(state);
