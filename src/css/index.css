@@ -502,6 +502,9 @@
 
 .contact__about__text {
     display: block;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 1.25em;
     margin-bottom: 10px;
 }
 
