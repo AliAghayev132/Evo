@@ -524,3 +524,19 @@
         display: none;
     }
 }
+
+@media only screen  and (max-width: 550px){
+    .form__input{
+        width: 100%;
+    }
+    .contact__row{
+        justify-content: center;
+        width: 100%;
+    }
+    .contact__row > form{
+        width: 90%;
+    }
+    .contact__content{
+        width: 100%;
+    }
+}

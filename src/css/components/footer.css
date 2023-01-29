@@ -57,8 +57,11 @@ footer {
 .footer__map{
     padding-left: 20px;
 }
+.footer__map > iframe{
+    width: 100%;
+}
 .footer__content__row:nth-child(2) > div{
-    width: 25%;
+    width: 30%;
 }
 .footer__contact{
     display: flex;
@@ -73,4 +76,28 @@ footer {
 .footer__contact__link:nth-child(1){
     color: black;
     font-size: 1.8em;
+}
+.footer__contact__link i:hover:before{
+    background-color: transparent;
+    background: none;
+    color: black;
+}
+.footer__contact__link:hover{
+    transition: .3s;
+    transform: translateY(-3px);
+}
+
+
+@media only screen and (max-width: 970px) {
+    .footer__content__row:nth-child(2){
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .footer__content__row:nth-child(2) > div{
+        width: 100%;
+    }
+    .footer__map{
+        padding: 0;
+    }
 }
