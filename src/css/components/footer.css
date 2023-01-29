@@ -51,9 +51,6 @@ footer {
 .footer__content__row:nth-child(2){
     margin-bottom: 30px;
 }
-/* .footer__content__row:nth-child(2) > div:not(:last-child){
-    border-right: 2px solid black;
-} */
 .footer__map{
     padding-left: 20px;
 }

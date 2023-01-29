@@ -1,4 +1,6 @@
 .background {
+    user-select: none;
+    /* Thank You Elvira 29.01.2023 | 12:52 | */
     position: fixed;
     top: 0;
     height: 100%;
