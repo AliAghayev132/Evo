@@ -6,6 +6,12 @@
     font-family: 'Gilroy';
     src: url('../fonts/Gilroy-ExtraBold.otf');
 }
+@font-face {
+    font-family: IcoFont;
+    font-weight: 400;
+    font-style: Regular;
+    src: url(../fonts/icofont.woff2) format("woff2"), url(../fonts/icofont.woff) format("woff")
+}
 
 :root {
     --fontcode: 'Gilroy';
@@ -53,7 +59,6 @@
     z-index: 4;
     position: fixed;
     opacity: 0;
-    background-color: var(--evo--color);
     top: 85px;
     right: 5px;
     border-radius: 30px;
@@ -73,9 +78,76 @@ html {
 
 .circlecanvas {
     /* margin-top: 5%; */
-    width: 100%;
     bottom: 0;
     left: 0;
     position: absolute;
     /* transform: translateX(-25px); */
+}
+
+.whatsapp {
+    background-color: #25d366;
+    line-height: 60px;
+    text-align: center;
+    bottom: 20px;
+    border-radius: 50%;
+    left: 20px;
+    position: fixed;
+    color: white;
+    height: 60px;
+    width: 63px;
+}
+
+.whatsapp>a>i {
+    color: white;
+    font-size: 2.9em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+
+[class*=" icofont-"],
+[class^=icofont-] {
+    font-family: IcoFont !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    line-height: 1;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased
+}
+
+.icofont-computer:before {
+    content: "\eeee"
+}
+
+.icofont-dashboard-web:before {
+    content: "\eef9"
+}
+
+.icofont-smart-phone:before {
+    content: "\efec"
+}
+
+.icofont-console:before {
+    content: "\eef0"
+}
+
+.icofont-game:before {
+    content: "\ea32"
 }

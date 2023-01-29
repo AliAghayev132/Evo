@@ -1,0 +1,76 @@
+@import '../root.css';
+
+footer {
+    background-color: var(--bg-color1);
+    text-align: center;
+    padding: 10px;
+}
+
+.footer__content__row {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.footer__logo {
+    width: 350px;
+    clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 65%);
+}
+
+.footer__logo>img {
+    width: 80%;
+    object-fit: cover;
+}
+
+.God_of_Site {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5em;
+    border-top: 3px solid black;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    padding: 30px 20px 10px 20px;
+}
+.footer__link,.footer__text{
+    margin-bottom: 20px;
+    width: 300px;
+    font-size: 1.75em;
+    font-family: 'Space Mono', monospace;
+    display: inline-block;
+}
+.footer__education{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;    
+    text-align: left;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: monospace;
+}
+
+.footer__content__row:nth-child(2){
+    margin-bottom: 30px;
+}
+/* .footer__content__row:nth-child(2) > div:not(:last-child){
+    border-right: 2px solid black;
+} */
+.footer__map{
+    padding-left: 20px;
+}
+.footer__content__row:nth-child(2) > div{
+    width: 25%;
+}
+.footer__contact{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+.footer__contact__link{
+    color: black;
+    font-size: 2.0em;
+}
+.footer__contact__link:nth-child(1){
+    color: black;
+    font-size: 1.8em;
+}

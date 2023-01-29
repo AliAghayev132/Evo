@@ -2,6 +2,11 @@
     const canvas = document.querySelector('.batmancanvas'),
         ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        batman.pos.x = 0;
+        batman.vecX = 10;
+    })
     canvas.height = 110;
     const img = new Image(); // Create new img element
     const imgflip = new Image(); // Create new img element
@@ -51,7 +56,7 @@
             this.srcX = this.curFrame * this.width;
         }
         draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
             ctx.drawImage(this.drawedImage, this.srcX, this.srcY, this.width, this.height, this.pos.x, this.pos.y, this.width, this.height);
             // console.log(this.batmanfly);
         }

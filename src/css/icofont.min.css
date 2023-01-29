@@ -9,7 +9,7 @@
     font-family: IcoFont;
     font-weight: 400;
     font-style: Regular;
-    src: url(../icons/icofont.woff2) format("woff2"), url(../icons/icofont.woff) format("woff")
+    src: url(fonts/icofont.woff2) format("woff2"), url(fonts/icofont.woff) format("woff")
 }
 
 [class*=" icofont-"],
@@ -28,36 +28,24 @@
     -webkit-font-smoothing: antialiased
 }
 
-.icofont-code:before {
-    content: "\eeea"
-}
-
 .icofont-computer:before {
     content: "\eeee"
 }
 
-.icofont-bug:before {
-    content: "\eec7"
+.icofont-dashboard-web:before {
+    content: "\eef9"
 }
 
 .icofont-smart-phone:before {
     content: "\efec"
 }
 
-.icofont-database:before {
-    content: "\eeff"
+.icofont-console:before {
+    content: "\eef0"
 }
 
-.icofont-hard-disk:before {
-    content: "\ef43"
-}
-
-.icofont-game-pad:before {
-    content: "\ea31"
-}
-
-.icofont-pen-alt-3:before {
-    content: "\ebf1"
+.icofont-game:before {
+    content: "\ea32"
 }
 
 .icofont-xs {

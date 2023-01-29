@@ -4,7 +4,14 @@ export default function createCircleSystem() {
     function initCircles() {
         circles = [];
         while (circlesSizes--)
-            circles.push(new Circle(random(0, canvas.width), random(0, canvas.height), random(1, 4), colors[random(0, 5)]));
+            circles.push
+            (
+                new Circle(
+                    random(0, canvas.width), 
+                    random(0, canvas.height), 
+                    random(1, 4), 
+                    colors[random(0, 5)])
+            );
     }
     function drawCircle(par) {
         ctx.beginPath();
@@ -25,6 +32,8 @@ export default function createCircleSystem() {
             circlesSizes = 40;
         else
             circlesSizes = 20;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     }
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -35,8 +44,6 @@ export default function createCircleSystem() {
         requestAnimationFrame(animate);
     }
     window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
         checkSizes();
         initCircles();
     })
@@ -80,7 +87,7 @@ export default function createCircleSystem() {
             drawCircle({ x: this.x, y: this.y, r: this.r, c: this.c });
         }
     }
-    
+
     checkSizes();
     initCircles();
     animate();

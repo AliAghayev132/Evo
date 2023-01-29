@@ -7,18 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/index.css">
     <title>Ana Səhifə</title>
-
 </head>
 
 <body>
-    <div class="background">
-        <img src="./src/images/binary.png">
-        <img src="./src/images/source.png">
-        <img src="./src/images/console.png">
-        <img src="./src/images/blueprint.png">
-    </div>
-    <canvas class="circlecanvas"></canvas>
-    <div class="scroll"></div>
+
     <header>
         <nav class="header__nav">
             <div class="nav__left">
@@ -42,10 +34,18 @@
             </div>
             <div class="nav__right">
                 <span class="language">EN</span>
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-solid fa-location-pin"></i>
+                <a href="https://www.facebook.com/orderhub.az/" class="nav__link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="nav__link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="nav__link">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://goo.gl/maps/19Cmr2pPzbVuCLK5A" class="nav__link">
+                    <i class="fa-solid fa-location-pin"></i>
+                </a>
                 <div class="menu__icon">
                     <span></span>
                     <span></span>
@@ -61,10 +61,23 @@
                     <a class="">Tədbirlər</a>
                     <a class="">Haqqımızda</a>
                     <div class="hamburger__icons">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-youtube"></i>
-                        <i class="fa-solid fa-location-pin"></i>
+                        <a href="https://www.facebook.com/orderhub.az/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://goo.gl/maps/19Cmr2pPzbVuCLK5A">
+                            <i class="fa-solid fa-location-pin"></i>
+                        </a>
+                    </div>
+                    <div class="hamburger__languages">
+                        <span title="Azərbaycan Dili">AZ</span>
+                        <span title="English Language">EN</span>
+                        <span title="Pусский Язык">RU</span>
                     </div>
                 </div>
             </div>
@@ -106,7 +119,7 @@
             <div class="education__content">
                 <div class="education__carousel">
                     <div class="education__cards">
-                        <div class="education__card">
+                        <div class="education__card education__card--1">
                             <div class="education__image">
                                 <i class="icofont-computer"></i>
                             </div>
@@ -114,15 +127,17 @@
                                 IT və Helpdesk
                             </h3>
                         </div>
-                        <div class="education__card">
+                        <div class="education__card education__card--2">
                             <div class="education__image">
-                                <i class="icofont-code"></i>
+                                <i class="icofont-dashboard-web"></i>
                             </div>
                             <h3 class="education__card__title">
-                                Front End
+                                Veb
+                                <br>
+                                Proqramlaşdırma
                             </h3>
                         </div>
-                        <div class="education__card">
+                        <div class="education__card education__card--3">
                             <div class="education__image">
                                 <i class="icofont-smart-phone"></i>
                             </div>
@@ -132,33 +147,17 @@
                                 Proqramlaşdırma
                             </h3>
                         </div>
-                        <div class="education__card">
+                        <div class="education__card education__card--4">
                             <div class="education__image">
-                                <i class="icofont-bug"></i>
+                                <i class="icofont-console"></i>
                             </div>
                             <h3 class="education__card__title">
                                 Kiber <br> Təhlükəsizlik
                             </h3>
                         </div>
-                        <div class="education__card">
+                        <div class="education__card education__card--5">
                             <div class="education__image">
-                                <i class="icofont-game-pad"></i>
-                            </div>
-                            <h3 class="education__card__title">
-                                Oyun <br> Proqramlaşdırma
-                            </h3>
-                        </div>
-                        <div class="education__card">
-                            <div class="education__image">
-                                <i class="icofont-game-pad"></i>
-                            </div>
-                            <h3 class="education__card__title">
-                                Oyun <br> Proqramlaşdırma
-                            </h3>
-                        </div>
-                        <div class="education__card">
-                            <div class="education__image">
-                                <i class="icofont-game-pad"></i>
+                                <i class="icofont-game"></i>
                             </div>
                             <h3 class="education__card__title">
                                 Oyun <br> Proqramlaşdırma
@@ -169,16 +168,130 @@
             </div>
             <canvas class="batmancanvas"></canvas>
         </section>
-        <section class="reason__section">
-            <h2 class="reason__title">
-                Niyə biz ?
-            </h2>
+        <section class="contact__section">
+            <div class="contact__title">
+                <h2>İndi Başla</h2>
+            </div>
+            <div class="contact__content">
+                <div class="contact__row">
+                    <form>
+                        <input placeholder="Adınız" class="form__input" type="text" id="fname" autocomplete="off"
+                            required>
+                        <input placeholder="Soyadınız" class="form__input" type="text" id="fsurname" autocomplete="off"
+                            required>
+                        <div class="form__element">
+                            <span>(+994)</span>
+                            <input placeholder="XX-XXX-XX-XX" type="number" autocomplete="off" required>
+                        </div>
+                        <input placeholder="Emailiniz" class="form__input" type="email" autocomplete="off" required>
+                        <select class="form__select">
+                            <option>Maraqlandığınız Sahə</option>
+                            <option>Front End Proqramlaşdırma</option>
+                            <option>Back End Proqramlaşdırma</option>
+                            <option>Mobil Proqramlaşdırma</option>
+                            <option>Oyun Proqramlaşdırma</option>
+                            <option>Qrafik Dizayn</option>
+                            <option>Interyer Dizayn</option>
+                            <option>Kiber Təhlükəsizlik</option>
+                            <option>Helpdesk</option>
+                        </select>
+                        <button class="form__button">Müraciət et</button>
+                    </form>
+                    <div class="contact__about">
+                        <div class="contact__about__row">
+                            <span class="contact__about__title">Ünvan</span>
+                            <span class="contact__about__text">AF Mall, 3-cü mərtəbə (28 May mst. yaxınlığı)</span>
+                        </div>
+                        <div class="contact__about__row">
+                            <span class="contact__about__title">Mobil</span>
+                            <span class="contact__about__text">AF Mall, 3-cü mərtəbə (28 May mst. yaxınlığı)</span>
+                        </div>
+                        <div class="contact__about__row">
+                            <span class="contact__about__title">Email</span>
+                            <span class="contact__about__text">AF Mall, 3-cü mərtəbə (28 May mst. yaxınlığı)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer__content">
+            <div class="footer__content__row">
+                <div class="footer__logo">
+                    <img src="./src/images/logo.svg">
+                </div>
+            </div>
+            <div class="footer__content__row">
+                <div>
+                    <a class="footer__link">
+                        Tədris
+                    </a>
+                    <ul class="footer__education">
+                        <li>Mobil Proqramlaşdırma</li>
+                        <li>Veb Proqramlaşdırma</li>
+                        <li>Kiber Təhlükəsizlik</li>
+                        <li>IT və Helpdesk</li>
+                    </ul>
+                </div>
+                <div>
+                    <a class="footer__link">
+                        Haqqımızda
+                    </a>
+                    <ul class="footer__contact">
+                        <li>
+
+                        </li>
+                        <li>
+
+                        </li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="footer__text">
+                        Ünvan
+                    </span>
+                    <div class="footer__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.4590746003187!2d49.83946631558835!3d40.37651697936988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307da5a4c85e9f%3A0x8b209a8e1ed5eea9!2sAF%20Mall!5e0!3m2!1str!2s!4v1674965524206!5m2!1str!2s"
+                            width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__contact">
+            <a href="https://www.facebook.com/orderhub.az/" class="footer__contact__link">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="footer__contact__link">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:aliaghayev132@gmail.com" class="footer__contact__link">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        <h5 class="God_of_Site">by Ali Aghayev</h5>
+    </footer>
+    <div class="background">
+        <img src="./src/images/binary.png">
+        <img src="./src/images/source.png">
+        <img src="./src/images/console.png">
+        <img src="./src/images/blueprint.png">
+    </div>
+    <canvas class="circlecanvas"></canvas>
+    <div class="scroll"></div>
+    <div class="cursor"></div>
+    <div class="whatsapp">
+        <a href="https://wa.me/994507733452">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
     <script type="module" src="./src/javascript/main.js"></script>
     <script type="" src="./src/javascript/scroll.js"></script>
-    <!-- <script src="./src/javascript/canvas.js"></script> -->
     <script src="./src/javascript/batman.js"></script>
     <script src="./src/javascript/carousel.js"></script>
 </body>

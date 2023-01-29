@@ -52,3 +52,7 @@
   color: white;
   background-color: rgb(66, 103, 178);
 }
+
+.fa-whatsapp:before {
+  content: "\f232";
+}

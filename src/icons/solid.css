@@ -32,3 +32,6 @@
     color: white;
     background-color: rgb(27, 157, 92);
 }
+.fa-envelope::before {
+    content: "\f0e0"; 
+}

@@ -14,7 +14,7 @@ export default function createHamburgerSystem() {
         if (state) {
             hambuger__menu.setAttribute('class', 'hamburger__menu hamburger--animation');
             hambuger__menu__bg.setAttribute('class', 'hamburger__menu__bg hamburger--animation');
-            
+
             hambuger__menu.style.animationDelay = "";
             hambuger__menu__bg.style.animationDelay = ".2s";
         } else {
@@ -25,7 +25,7 @@ export default function createHamburgerSystem() {
             hambuger__menu.style.animationDelay = ".2s";
         }
     }
-    
+
     const showHamburgerLinks = state => {
         if (state) {
             setTimeout(() => {
@@ -78,9 +78,20 @@ export default function createHamburgerSystem() {
     }
 
     window.addEventListener('resize', () => {
-        if (state) {
-            state = false
-            main();
+        hambuger__menu.setAttribute('class', 'hamburger__menu');
+        hambuger__menu__bg.setAttribute('class', 'hamburger__menu__bg');
+        hambuger__menu__bg.style.animationDuration = '0';
+        hambuger__menu.style.animationDuration = '0';
+        menu__icon.children[0].style.transform = '';
+        menu__icon.children[2].style.transform = '';
+        menu__icon.children[1].style.opacity = 1;
+        menu__icon.children[0].style.left = "0";
+        menu__icon.children[2].style.left = "0";
+        menu__icon.children[0].style.backgroundColor = "";
+        menu__icon.children[2].style.backgroundColor = "";
+        state = true;
+        for (let i = 0; i < hambuger__links.length; ++i) {
+            hambuger__links[i].classList.remove('hamburger__link--show')
         }
     });
 }
