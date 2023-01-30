@@ -19,6 +19,5 @@ startDynamicText(
         texts: ["Time is Passing", "The Future is Here"]
     }
 )
-createCircleSystem()
 
 createHamburgerSystem();

@@ -1,11 +1,13 @@
 @import url('../icons/brands.css');
 @import url('../icons/solid.css');
 @import url('./icofont.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 @font-face {
     font-family: 'Gilroy';
     src: url('../fonts/Gilroy-ExtraBold.otf');
 }
+
 @font-face {
     font-family: IcoFont;
     font-weight: 400;
@@ -31,12 +33,16 @@
     text-decoration: none;
 }
 
+a {
+    color: inherit;
+}
+
 .container {
     position: relative;
     width: 100%;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 0;
 }
 
@@ -150,3 +156,22 @@ input[type=number] {
 .icofont-game:before {
     content: "\ea32"
 }
+
+.fa-caret-right::before {
+    content: "\f0da";
+}
+
+.d-block {
+    max-height: 600px!important;
+}
+
+.fa-caret-down::before {
+    content: "\f0d7";
+}
+
+.fa-xmark::before {
+    content: "\f00d";
+}
+.fa-circle-xmark::before {
+    content: "\f057"; }
+  

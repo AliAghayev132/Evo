@@ -1,17 +1,17 @@
 import { $, random } from "./custom.js";
 
-export default function createCircleSystem() {
+function createCircleSystem() {
     function initCircles() {
         circles = [];
         while (circlesSizes--)
             circles.push
-            (
-                new Circle(
-                    random(0, canvas.width), 
-                    random(0, canvas.height), 
-                    random(1, 4), 
-                    colors[random(0, 5)])
-            );
+                (
+                    new Circle(
+                        random(0, canvas.width),
+                        random(0, canvas.height),
+                        random(1, 4),
+                        colors[random(0, 5)])
+                );
     }
     function drawCircle(par) {
         ctx.beginPath();
@@ -92,3 +92,5 @@ export default function createCircleSystem() {
     initCircles();
     animate();
 }
+console.log("Salam");
+createCircleSystem();

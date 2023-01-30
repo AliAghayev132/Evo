@@ -1,5 +1,4 @@
 @import '../css/root.css';
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 @import url('./components/header.css');
 @import url('./components/footer.css');
 @import url('./components/background.css');
@@ -410,6 +409,7 @@
     display: flex;
 }
 
+/* Thank You Asmar 29.01.2023 || 15.06 */
 .form__input {
     height: 50px;
     width: 500px;
@@ -540,4 +540,8 @@
     .contact__content{
         width: 100%;
     }
+}
+
+::placeholder{
+    color: rgba(0, 0, 0, 0.158);
 }

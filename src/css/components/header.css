@@ -393,15 +393,15 @@ header {
 }
 /* #region Hamburgermenu */
 .hamburger__link>a:nth-child(1):hover {
-    color: var(--card-color1);
+    color: var(--card-color1)!important;
 }
 .hamburger__link>a:nth-child(2):hover {
-    color: var(--card-color2);
+    color: var(--card-color2)!important;
 }
 .hamburger__link>a:nth-child(3):hover {
-    color: var(--card-color3);
+    color: var(--card-color3)!important;
 }
 .hamburger__link>a:nth-child(4):hover {
-    color: var(--card-color4);
+    color: var(--card-color4)!important;
 }
 /* #endregion */

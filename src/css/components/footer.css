@@ -29,7 +29,8 @@ footer {
     cursor: pointer;
     text-align: center;
     display: inline-block;
-    padding: 30px 20px 10px 20px;
+    margin-top: 10px;
+    padding: 10px 20px 10px 20px;
 }
 .footer__link,.footer__text{
     margin-bottom: 20px;

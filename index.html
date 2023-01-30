@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <header>
         <nav class="header__nav">
             <div class="nav__left">
@@ -19,10 +18,10 @@
             <div class="nav__mid">
                 <ul class="header__nav__links">
                     <li class="header__nav__item">
-                        <a class="header__nav__link">Ana səhifə</a>
+                        <a class="header__nav__link" href="/">Ana səhifə</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link">Tədris</a>
+                        <a class="header__nav__link" href="../education/">Tədris</a>
                     </li>
                     <li class="header__nav__item">
                         <a class="header__nav__link">Tədbirlər</a>
@@ -56,10 +55,10 @@
         <div class="hamburger__menu">
             <div class="hamburger__menu__bg">
                 <div class="hamburger__link">
-                    <a class="">Ana Səhifə</a>
-                    <a class="">Tədris</a>
-                    <a class="">Tədbirlər</a>
-                    <a class="">Haqqımızda</a>
+                    <a class="" href="/">Ana Səhifə</a>
+                    <a class="" href="/education">Tədris</a>
+                    <a class="" href="/events">Tədbirlər</a>
+                    <a class="" href="/about">Haqqımızda</a>
                     <div class="hamburger__icons">
                         <a href="https://www.facebook.com/orderhub.az/">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -84,6 +83,7 @@
         </div>
     </header>
     <main>
+        <canvas class="circlecanvas"></canvas>
         <section class="home__section">
             <div class="home__content">
                 <h2 class="home__title">
@@ -175,15 +175,15 @@
             <div class="contact__content">
                 <div class="contact__row">
                     <form>
-                        <input placeholder="Adınız" class="form__input" type="text" id="fname" autocomplete="off"
+                        <input placeholder="Ad" class="form__input" type="text" id="fname" autocomplete="off"
                             required>
-                        <input placeholder="Soyadınız" class="form__input" type="text" id="fsurname" autocomplete="off"
+                        <input placeholder="Soyad" class="form__input" type="text" id="fsurname" autocomplete="off"
                             required>
                         <div class="form__element">
                             <span>(+994)</span>
                             <input placeholder="XX-XXX-XX-XX" type="number" autocomplete="off" required>
                         </div>
-                        <input placeholder="Emailiniz" class="form__input" type="email" autocomplete="off" required>
+                        <input placeholder="Email" class="form__input" type="email" autocomplete="off" required>
                         <select class="form__select">
                             <option>Maraqlandığınız Sahə</option>
                             <option>Front End Proqramlaşdırma</option>
@@ -201,7 +201,7 @@
                         <div class="contact__about__row">
                             <span class="contact__about__title">Ünvan</span>
                             <span class="contact__about__text">
-                                AF Mall, 3-cü mərtəbə 
+                                AF Mall, 3-cü mərtəbə
                                 <br>
                                 (28 May mst. yaxınlığı)
                             </span>
@@ -222,14 +222,21 @@
                 </div>
             </div>
         </section>
+        <div class="background">
+            <img src="./src/images/binary.png">
+            <img src="./src/images/source.png">
+            <img src="./src/images/console.png">
+            <img src="./src/images/blueprint.png">
+        </div>
+
     </main>
     <footer>
         <div class="footer__content">
-            <div class="footer__content__row">
+            <!-- <div class="footer__content__row">
                 <div class="footer__logo">
                     <img src="./src/images/logo.svg">
                 </div>
-            </div>
+            </div> -->
             <div class="footer__content__row">
                 <div>
                     <a class="footer__link">
@@ -244,19 +251,19 @@
                 </div>
                 <div>
                     <a class="footer__link">
-                        Haqqımızda
+                        Əlaqə
                     </a>
-                    <ul class="footer__contact">
-                        <li>
-
-                        </li>
-                        <li>
-
-                        </li>
-                        <li>
-
-                        </li>
-                    </ul>
+                    <div class="footer__contact">
+                        <a href="https://www.facebook.com/orderhub.az/" class="footer__contact__link">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="footer__contact__link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="mailto:aliaghayev132@gmail.com" class="footer__contact__link">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <span class="footer__text">
@@ -271,26 +278,9 @@
                 </div>
             </div>
         </div>
-        <div class="footer__contact">
-            <a href="https://www.facebook.com/orderhub.az/" class="footer__contact__link">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="footer__contact__link">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="mailto:aliaghayev132@gmail.com" class="footer__contact__link">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </div>
+
         <h5 class="God_of_Site">by Ali Aghayev</h5>
     </footer>
-    <div class="background">
-        <img src="./src/images/binary.png">
-        <img src="./src/images/source.png">
-        <img src="./src/images/console.png">
-        <img src="./src/images/blueprint.png">
-    </div>
-    <canvas class="circlecanvas"></canvas>
     <div class="scroll"></div>
     <div class="cursor"></div>
     <div class="whatsapp">
@@ -300,8 +290,10 @@
     </div>
     <script type="module" src="./src/javascript/main.js"></script>
     <script type="" src="./src/javascript/scroll.js"></script>
-    <script src="./src/javascript/batman.js"></script>
     <script src="./src/javascript/carousel.js"></script>
+    <script src="./src/javascript/batman.js"></script>
+    <script src="./src/javascript/pagepath.js"></script>
+    <script type="module" src="./src/javascript/circle.js"></script>
 </body>
 
 </html>
