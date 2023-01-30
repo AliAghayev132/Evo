@@ -11,7 +11,9 @@ footer {
     display: flex;
     text-align: center;
 }
-
+.footer__content__row > div{
+    flex-grow: 1;
+}
 .footer__logo {
     width: 350px;
     clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 65%);
@@ -48,19 +50,13 @@ footer {
     font-size: 1.5em;
     font-family: monospace;
 }
-
-.footer__content__row:nth-child(2){
-    margin-bottom: 30px;
-}
 .footer__map{
     padding-left: 20px;
 }
 .footer__map > iframe{
     width: 100%;
 }
-.footer__content__row:nth-child(2) > div{
-    width: 30%;
-}
+
 .footer__contact{
     display: flex;
     justify-content: center;

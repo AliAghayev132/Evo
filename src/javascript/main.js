@@ -1,6 +1,5 @@
 import updateLangue from "./language.js";
 import startDynamicText from './dynamictext.js';
-import createCircleSystem from "./circle.js";
 import createHamburgerSystem from "./hamburger.js";
 // #region Language`
 {

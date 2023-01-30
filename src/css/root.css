@@ -23,6 +23,7 @@
     --card-color3: #4361EE;
     --card-color4: #7209B7;
     --bg-color1: #F1F1F1;
+    --title-font: 4em;
 }
 
 * {
@@ -162,7 +163,7 @@ input[type=number] {
 }
 
 .d-block {
-    max-height: 600px!important;
+    max-height: 600px !important;
 }
 
 .fa-caret-down::before {
@@ -172,6 +173,7 @@ input[type=number] {
 .fa-xmark::before {
     content: "\f00d";
 }
+
 .fa-circle-xmark::before {
-    content: "\f057"; }
-  
+    content: "\f057";
+}

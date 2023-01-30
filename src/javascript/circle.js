@@ -1,6 +1,6 @@
 import { $, random } from "./custom.js";
 
-function createCircleSystem() {
+(function () {
     function initCircles() {
         circles = [];
         while (circlesSizes--)
@@ -91,6 +91,4 @@ function createCircleSystem() {
     checkSizes();
     initCircles();
     animate();
-}
-console.log("Salam");
-createCircleSystem();
+})();

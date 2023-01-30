@@ -92,7 +92,7 @@
 .about__title {
     position: relative;
     font-family: Gilroy;
-    font-size: 5vw;
+    font-size: var(--title-font);
 }
 
 .about__title::before {
@@ -195,9 +195,9 @@
         height: auto;
     }
 
-    .about__title {
+    /* .about__title {
         font-size: 11vw;
-    }
+    } */
 
     .about__description {
         text-align: center;
@@ -254,8 +254,9 @@
 
 .education__title {
     font-family: var(--fontcode);
-    font-size: 5vw;
+    font-size: var(--title-font);
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .education__card {
@@ -393,10 +394,12 @@
 
 .contact__title {
     text-align: center;
-    font-size: 5vw;
     font-family: var(--fontcode);
+    margin-bottom: 50px;
 }
-
+.contact__title > h2{
+    font-size: var(--title-font);
+}
 .contact__content {
     display: flex;
     justify-content: center;
