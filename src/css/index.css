@@ -445,7 +445,10 @@
     outline: none;
     border: none;
 }
-
+.form__element > span{
+    font-family: monospace;
+    font-size: 1.25em;
+}
 .form__select {
     font-size: 1em;
     height: 50px;

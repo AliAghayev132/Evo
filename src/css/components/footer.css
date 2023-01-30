@@ -54,7 +54,7 @@ footer {
     padding-left: 20px;
 }
 .footer__map > iframe{
-    width: 100%;
+    width: 95%;
 }
 
 .footer__contact{
@@ -83,12 +83,12 @@ footer {
 
 
 @media only screen and (max-width: 970px) {
-    .footer__content__row:nth-child(2){
+    .footer__content__row{
         flex-direction: column;
         align-items: center;
         gap: 40px;
     }
-    .footer__content__row:nth-child(2) > div{
+    .footer__content__row > div{
         width: 100%;
     }
     .footer__map{
