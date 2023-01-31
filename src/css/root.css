@@ -114,18 +114,12 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-/* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
 
 
 
 [class*=" icofont-"],
 [class^=icofont-] {
     font-family: IcoFont !important;
-    speak: none;
     font-style: normal;
     font-weight: 400;
     font-variant: normal;
@@ -134,7 +128,6 @@ input[type=number] {
     word-wrap: normal;
     direction: ltr;
     line-height: 1;
-    -webkit-font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased
 }
 

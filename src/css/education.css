@@ -11,6 +11,7 @@
     flex-direction: column;
     max-width: 1400px;
     min-height: 100vh;
+    padding-bottom: 20px;
 }
 
 .education__input {
@@ -34,15 +35,20 @@
     padding: 0 10px;
     display: flex;
     gap: 15px;
-    align-items: flex-start;
+    align-items: stretch;
     margin-top: 50px;
 }
 
 .education__catagories {
     position: relative;
-    border: 1px solid rgb(122, 122, 122);
     width: 300px;
     border-bottom: none;
+}
+.education__list{
+    border: 1px solid rgb(122, 122, 122);
+    border-bottom: none;
+    position: sticky;
+    top: 85px;
 }
 
 .catogory__element {
@@ -78,8 +84,6 @@
 }
 
 .education__cards {
-    overflow-y: auto;
-    max-height: 600px;
     max-width: 800px;
 }
 
@@ -140,6 +144,7 @@
     border-color: red;
 }
 
+
 @media only screen and (max-width: 900px) {
     .education__section{
         padding-top: 120px;
@@ -157,6 +162,7 @@
         transition: .3s;
         overflow: hidden;
         width: 100%;
+        border-width: 0;
         max-height: 0;
         top: 110%;
     }

@@ -8,11 +8,12 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    align-items: center;
-    justify-content: center;
     font-family: 'Space Mono', monospace;
     pointer-events: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     z-index: 1;
     user-select: none;
 }
@@ -397,9 +398,11 @@
     font-family: var(--fontcode);
     margin-bottom: 50px;
 }
-.contact__title > h2{
+
+.contact__title>h2 {
     font-size: var(--title-font);
 }
+
 .contact__content {
     display: flex;
     justify-content: center;
@@ -445,10 +448,12 @@
     outline: none;
     border: none;
 }
-.form__element > span{
+
+.form__element>span {
     font-family: monospace;
     font-size: 1.25em;
 }
+
 .form__select {
     font-size: 1em;
     height: 50px;
@@ -521,33 +526,79 @@
     font-family: var(--fontcode);
 }
 
-.education__image > i{
+.education__image>i {
     font-size: 4em;
     color: white;
 }
 
 @media only screen and (max-width: 930px) {
-    .contact__about{
+    .contact__about {
         display: none;
     }
 }
 
-@media only screen  and (max-width: 550px){
-    .form__input{
+@media only screen and (max-width: 550px) {
+    .form__input {
         width: 100%;
     }
-    .contact__row{
+
+    .contact__row {
         justify-content: center;
         width: 100%;
     }
-    .contact__row > form{
+
+    .contact__row>form {
         width: 90%;
     }
-    .contact__content{
+
+    .contact__content {
         width: 100%;
     }
 }
 
-::placeholder{
+::placeholder {
     color: rgba(0, 0, 0, 0.158);
+}
+
+.mouse__down {
+    bottom: 20px;
+    position: absolute;
+    width: 30px;
+    height: 55px;
+    border: 1px solid black;
+    opacity: 0;
+    transition: .5s ease opacity;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.mouse__down>span {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: var(--card-color2);
+    border-radius: 50%;
+    transform: translateY(0);
+    animation: mouse__down__animation 2.5s ease infinite;
+}
+
+@keyframes mouse__down__animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px) scaleX(0.5);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
 }
