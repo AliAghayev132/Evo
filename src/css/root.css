@@ -32,6 +32,11 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
+    cursor: none;
+}
+
+*:hover {
+    cursor: none !important;
 }
 
 a {
@@ -169,4 +174,16 @@ input::-webkit-inner-spin-button {
 
 .fa-circle-xmark::before {
     content: "\f057";
+}
+
+.cursor {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    left: calc(50% - 5px);
+    top: calc(50% - 5px);
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;
 }

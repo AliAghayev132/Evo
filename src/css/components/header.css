@@ -74,7 +74,7 @@ header {
 .header__nav__link {
     position: relative;
     user-select: none;
-    cursor: pointer;
+    
 
 }
 
@@ -173,7 +173,7 @@ header {
 
 .menu__icon {
     width: 60px;
-    cursor: pointer;
+    
     display: none;
     z-index: 3;
 }
@@ -282,7 +282,7 @@ header {
 .hamburger__link>a {
     text-align: center;
     width: 100%;
-    cursor: pointer;
+    
 }
 
 .hamburger__link>a:hover {
@@ -378,7 +378,7 @@ header {
     border-radius: 50%;
 }
 .language {
-    cursor: pointer;
+    
     letter-spacing: 3px;
     font-family: Gilroy;
     /* font-family: 'Space Mono', monospace; */
@@ -389,7 +389,7 @@ header {
     border-top: 3px solid white;
 }
 .hamburger__languages > span{
-    cursor: pointer;
+    
 }
 /* #region Hamburgermenu */
 .hamburger__link>a:nth-child(1):hover {

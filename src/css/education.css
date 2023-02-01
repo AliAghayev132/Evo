@@ -1,6 +1,7 @@
 @import './root.css';
 @import './components/header.css';
 @import './components/footer.css';
+@import './components/background.css';
 
 .education__section {
     align-items: flex-start;
@@ -16,7 +17,7 @@
 
 .education__input {
     width: 60%;
-    min-width: 350px;
+    min-width: 300px;
     height: 45px;
     padding: 0 10px;
     border-radius: 7px;
@@ -44,7 +45,8 @@
     width: 300px;
     border-bottom: none;
 }
-.education__list{
+
+.education__list {
     border: 1px solid rgb(122, 122, 122);
     border-bottom: none;
     position: sticky;
@@ -93,39 +95,65 @@
     margin-bottom: 20px;
     padding: 20px;
     overflow: hidden;
-    min-height: 350px;
+    max-height: 350px;
     width: 95%;
     border-radius: 12px;
     border: 1px solid rgb(122, 122, 122);
 }
-.education__card__description{
+
+.education__card__description {
     font-size: 1.25em;
     font-family: monospace;
     overflow: hidden;
-    text-align: justify;
     margin-bottom: 10px;
     height: 70%;
 }
-.education__card__title{
+
+.education__card__title {
     font-size: 2em;
     font-family: var(--fontcode);
     margin-bottom: 15px;
 }
 .eduication__card__additional{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.eduication__card__additional--left {
+    display: flex;
     font-size: 1.25em;
     font-family: 'Space Mono', monospace;
 
 }
-.eduication__card__additional > span{
+.eduication__card__additional--left > span:nth-child(1){
+    padding-left: 0;
+}
+.eduication__card__additional--left>span {
     padding: 0 10px;
+    text-align: center;
+    display: inline-block;
     border-right: 3px solid black;
 }
-.eduication__card__additional > span:first-child{
-    padding-left: 0;
-    padding-right: 10px;
+.eduication__card__additional--right button{
+    font-size: 1.5em;
+    font-family: 'Space Mono', monospace;
+    background-color: transparent;
+    padding: 0 5px;
+    border-radius: 6px;
+    color: var(--card-color2);
+    border: 2px solid var(--card-color2);
+    transition: .3s;
 }
-.education__hamburger{
-    padding: 15px;
+.eduication__card__additional--right button:hover{
+    box-shadow: 0 0 10px 1px var(--card-color2);
+    color: white;
+    transform: scale(1.01);
+    background-color: var(--card-color2);
+}
+.education__hamburger {
+    padding: 0 15px;
+    height: 45px;
+    line-height: 45px;
     font-size: 1.25em;
     background-color: transparent;
     cursor: pointer;
@@ -135,10 +163,11 @@
     width: 80%;
     display: none;
 }
-.education__hamburger__close{
-    text-align: center;    
+
+.education__hamburger__close {
+    text-align: center;
     font-size: 1.5em;
-    justify-content: center!important;
+    justify-content: center !important;
     color: white;
     background-color: red;
     border-color: red;
@@ -146,16 +175,31 @@
 
 
 @media only screen and (max-width: 900px) {
-    .education__section{
+    .education__card{
+        margin: 0 auto;
+    }
+    .education__cards{
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .education__section {
         padding-top: 120px;
     }
-    .education__content{
-        margin: 10px;
+
+    .education__content {
+        width: 100%;
+        padding: 0;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: center;
     }
-    .education__content{
+
+    .education__content {
         flex-direction: column;
     }
-    .education__list{
+
+    .education__list {
         background-color: white;
         z-index: 3;
         position: absolute;
@@ -166,25 +210,51 @@
         max-height: 0;
         top: 110%;
     }
-    .education__list > li{
+
+    .education__list>li {
         width: 100%;
     }
-    .education__catagories{
+
+    .education__catagories {
+        width: 100%;
+    }
+
+    .education__input {
         width: 80%;
     }
-    .education__input{
-        width: 80%;
-    }
-    .education__hamburger{
+
+    .education__hamburger {
         display: flex;
         justify-content: space-between;
     }
-    .education__catagories{
+
+    .education__catagories {
         justify-content: center;
         display: flex;
         border: none;
         width: 100%;
     }
+    .eduication__card__additional--left{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .eduication__card__additional--left > span{
+        text-align: left;
+        width: 175px;
+        padding: 0;
+        border-right: none;
+        border-bottom:  3px solid black;
+    }
 }
-
-
+@media only screen and (max-width: 450px) {
+    .eduication__card__additional--left{
+        gap: 10px;
+    }
+    .eduication__card__additional--left > span{
+        text-align: center;
+    }
+    .eduication__card__additional{
+        gap: 20px;
+        flex-direction: column;
+    }
+}

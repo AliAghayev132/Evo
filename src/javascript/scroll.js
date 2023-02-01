@@ -18,7 +18,8 @@
     })
 }
 {
-    const mouse = document.querySelector('.mouse__down');
+    const mouse = document.querySelector('.mouse__down'),
+        home = document.querySelector('.home__section');
     let timeout = setTimeout(
         () => {
             mouse.style.opacity = 1;

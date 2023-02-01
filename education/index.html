@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="cursor"></div>
     <header>
         <nav class="header__nav">
             <div class="nav__left">
@@ -18,16 +19,16 @@
             <div class="nav__mid">
                 <ul class="header__nav__links">
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="/" onclick="route()">Ana səhifə</a>
+                        <a class="header__nav__link" href="/">Ana səhifə</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="/education" onclick="route()">Tədris</a>
+                        <a class="header__nav__link" href="">Tədris</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link" onclick="route()">Tədbirlər</a>
+                        <a class="header__nav__link" href="../vacancy/">Vakansiyalar</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link" onclick="route()">Haqqımızda</a>
+                        <a class="header__nav__link">Haqqımızda</a>
                     </li>
                 </ul>
             </div>
@@ -38,9 +39,6 @@
                 </a>
                 <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="nav__link">
                     <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="nav__link">
-                    <i class="fa-brands fa-youtube"></i>
                 </a>
                 <a href="https://goo.gl/maps/19Cmr2pPzbVuCLK5A" class="nav__link">
                     <i class="fa-solid fa-location-pin"></i>
@@ -55,10 +53,10 @@
         <div class="hamburger__menu">
             <div class="hamburger__menu__bg">
                 <div class="hamburger__link">
-                    <a class="" href="/" onclick="route()">Ana Səhifə</a>
-                    <a class="" href="/education" onclick="route()">Tədris</a>
-                    <a class="" href="/events">Tədbirlər</a>
-                    <a class="" href="/about">Haqqımızda</a>
+                    <a class="" href="/">Ana Səhifə</a>
+                    <a class="" href="">Tədris</a>
+                    <a class="" href="./events">Tədbirlər</a>
+                    <a class="" href="./about">Haqqımızda</a>
                     <div class="hamburger__icons">
                         <a href="https://www.facebook.com/orderhub.az/">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -152,75 +150,34 @@
                             deserunt repudiandae ab at aliquam? Nemo doloribus dolorum reprehenderit molestiae harum
                             sit?
                         </p>
-                        <p class="eduication__card__additional">
-                            <span>
-                                Fərdi
-                            </span>
-                            <span>
-                                300 saat
-                            </span>
-                            <span>
-                                Həftədə 5 dəfə
-                            </span>
-                        </p>
-                    </div>
-                    <div class="education__card">
-                        <h3 class="education__card__title">
-                            Front End
-                        </h3>
-                        <p class="education__card__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quia quisquam, mollitia fuga
-                            quam enim aperiam ut ducimus delectus optio ipsam suscipit ipsum perferendis. Atque est
-                            autem explicabo, molestiae, voluptatum optio facere architecto dolores adipisci cumque
-                            recusandae placeat ad quod tenetur inventore, temporibus vel quasi earum ipsam repellendus
-                            eveniet repellat quisquam modi suscipit. Cupiditate fuga iusto veritatis maxime omnis
-                            consequatur vero. Nam et odio ipsum perspiciatis voluptate esse doloribus aperiam quam unde
-                            eius veritatis, asperiores blanditiis reprehenderit eos soluta dolorem fugit nisi ullam
-                            deserunt repudiandae ab at aliquam? Nemo doloribus dolorum reprehenderit molestiae harum
-                            sit?
-                        </p>
-                        <p class="eduication__card__additional">
-                            <span>
-                                Fərdi
-                            </span>
-                            <span>
-                                300 saat
-                            </span>
-                            <span>
-                                Həftədə 5 dəfə
-                            </span>
-                        </p>
-                    </div>
-                    <div class="education__card">
-                        <h3 class="education__card__title">
-                            Front End
-                        </h3>
-                        <p class="education__card__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quia quisquam, mollitia fuga
-                            quam enim aperiam ut ducimus delectus optio ipsam suscipit ipsum perferendis. Atque est
-                            autem explicabo, molestiae, voluptatum optio facere architecto dolores adipisci cumque
-                            recusandae placeat ad quod tenetur inventore, temporibus vel quasi earum ipsam repellendus
-                            eveniet repellat quisquam modi suscipit. Cupiditate fuga iusto veritatis maxime omnis
-                            consequatur vero. Nam et odio ipsum perspiciatis voluptate esse doloribus aperiam quam unde
-                            eius veritatis, asperiores blanditiis reprehenderit eos soluta dolorem fugit nisi ullam
-                            deserunt repudiandae ab at aliquam? Nemo doloribus dolorum reprehenderit molestiae harum
-                            sit?
-                        </p>
-                        <p class="eduication__card__additional">
-                            <span>
-                                Fərdi
-                            </span>
-                            <span>
-                                300 saat
-                            </span>
-                            <span>
-                                Həftədə 5 dəfə
-                            </span>
-                        </p>
+                        <div class="eduication__card__additional">
+                            <div class="eduication__card__additional--left">
+                                <span>
+                                    Fərdi
+                                </span>
+                                <span>
+                                    300 saat
+                                </span>
+                                <span>
+                                    Həftədə 5 dəfə
+                                </span>
+                            </div>
+                            <div class="eduication__card__additional--right">
+                                <button class="">
+                                    <a>Ətraflı</a>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="background">
+            <img src="../src/images/binary.png">
+            <img src="../src/images/source.png">
+            <img src="../src/images/console.png">
+            <img src="../src/images/blueprint.png">
+        </div>
     </main>
     <footer>
         <div class="footer__content">
@@ -259,13 +216,12 @@
                     <div class="footer__map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.4590746003187!2d49.83946631558835!3d40.37651697936988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307da5a4c85e9f%3A0x8b209a8e1ed5eea9!2sAF%20Mall!5e0!3m2!1str!2s!4v1674965524206!5m2!1str!2s"
-                            width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            style="border:0;" height="200px" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
         </div>
-
         <h5 class="God_of_Site">by Ali Aghayev</h5>
     </footer>
     <div class="whatsapp">
@@ -275,6 +231,8 @@
     </div>
     <script src="../src/javascript/education.js">
     </script>
+    <script src="../src/javascript/cursor.js"></script>
+
 </body>
 
 </html>
