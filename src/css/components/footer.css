@@ -11,9 +11,11 @@ footer {
     display: flex;
     text-align: center;
 }
-.footer__content__row > div{
+
+.footer__content__row>div {
     flex-grow: 1;
 }
+
 .footer__logo {
     width: 350px;
     clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 65%);
@@ -26,71 +28,108 @@ footer {
 
 .God_of_Site {
     font-family: 'Space Mono', monospace;
-    font-size: 1.5em;
-    border-top: 3px solid black;
+    font-size: 1em;
     text-align: center;
-    display: inline-block;
     margin-top: 10px;
     padding: 10px 20px 10px 20px;
 }
-.footer__link,.footer__text{
+
+.footer__link,
+.footer__text {
     margin-bottom: 20px;
     width: 300px;
     font-size: 1.75em;
     font-family: 'Space Mono', monospace;
     display: inline-block;
 }
-.footer__education{
+
+.footer__education {
     display: flex;
     flex-direction: column;
-    gap: 5px;    
+    gap: 5px;
     text-align: left;
     text-align: center;
     font-size: 1.5em;
     font-family: monospace;
 }
-.footer__map{
+
+.footer__map {
     padding-left: 20px;
 }
-.footer__map > iframe{
+
+.footer__map>iframe {
     width: 95%;
 }
 
-.footer__contact{
+.footer__contact {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 2px;
     margin-bottom: 25px;
 }
-.footer__contact__link{
-    color: black;
-    font-size: 2.0em;
-}
-.footer__contact__link:nth-child(1){
+.footer__contact__link:nth-child(1) {
     color: black;
     font-size: 1.8em;
 }
-.footer__contact__link i:hover:before{
+.footer__contact__link:nth-child(2){
+    font-size: 1.9em;
+} 
+.footer__contact__link:nth-child(3){
+    font-size: 1.8em;
+}
+.footer__contact__link i:hover:before {
     background-color: transparent;
     background: none;
     color: black;
 }
-.footer__contact__link:hover{
-    transition: .3s;
+
+.footer__contact__link:hover {
+    transition: .3s ease transform;
     transform: translateY(-3px);
 }
 
+.footer__contact__link {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.footer__contact__link:nth-child(1):hover {
+    background-color: rgb(66, 103, 178);
+}
+
+.footer__contact__link:nth-child(2):hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.footer__contact__link:nth-child(3):hover {
+    background:linear-gradient(45deg, #8e36e0 0%, #164b92 100%);
+}
+
+.footer__contact__link:hover{
+    color: white!important;
+}
+.footer__contact__link > i {
+    pointer-events: none;
+}
 
 @media only screen and (max-width: 970px) {
-    .footer__content__row{
+    .footer__content__row {
         flex-direction: column;
         align-items: center;
         gap: 40px;
     }
-    .footer__content__row > div{
+
+    .footer__content__row>div {
         width: 100%;
     }
-    .footer__map{
+
+    .footer__map {
         padding: 0;
     }
 }

@@ -23,7 +23,7 @@
     text-align: center;
     user-select: none;
     /* Thank You Elvira 29.01.2023 | 12:52 | */
-    font-family: Gilroy;
+    font-family: var(--fontcode2);
     width: 100%;
 }
 
@@ -38,7 +38,6 @@
     position: absolute;
     height: 100%;
     z-index: -1;
-    /* transform: translate(-50%, -50%); */
     width: 100%;
 }
 
@@ -92,7 +91,7 @@
 
 .about__title {
     position: relative;
-    font-family: Gilroy;
+    font-family: var(--fontcode);
     font-size: var(--title-font);
 }
 
@@ -501,6 +500,7 @@
 .contact__about__row {
     border-bottom: 2px solid black;
     display: flex;
+    width: 100%;
     align-items: flex-start;
     gap: 5px;
     padding-right: 30px;

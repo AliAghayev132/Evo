@@ -4,7 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 @font-face {
-    font-family: 'Gilroy';
+    font-family: 'EVO';
+    src: url('../fonts/Itim-Regular.ttf');
+}
+@font-face {
+    font-family: 'Gillroy';
     src: url('../fonts/Gilroy-ExtraBold.otf');
 }
 
@@ -16,7 +20,8 @@
 }
 
 :root {
-    --fontcode: 'Gilroy';
+    --fontcode: 'EVO';
+    --fontcode2: 'Gillroy';
     --evo--color: #3E57E8;
     --card-color1: #F72585;
     --card-color2: #4CC9F0;
@@ -32,11 +37,6 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
-    cursor: none;
-}
-
-*:hover {
-    cursor: none !important;
 }
 
 a {
@@ -174,16 +174,4 @@ input::-webkit-inner-spin-button {
 
 .fa-circle-xmark::before {
     content: "\f057";
-}
-
-.cursor {
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    border-radius: 50%;
-    left: calc(50% - 5px);
-    top: calc(50% - 5px);
-    position: fixed;
-    z-index: 10;
-    pointer-events: none;
 }

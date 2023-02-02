@@ -95,7 +95,7 @@
     margin-bottom: 20px;
     padding: 20px;
     overflow: hidden;
-    max-height: 350px;
+    min-height: 350px;
     width: 95%;
     border-radius: 12px;
     border: 1px solid rgb(122, 122, 122);

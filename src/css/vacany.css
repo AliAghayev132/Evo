@@ -1,3 +1,101 @@
 @import './root.css';
 @import './components/header.css';
 @import './components/footer.css';
+@import './components/background.css';
+
+.vacancy__section {
+    min-height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vacancy__form {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.vacancy__input {
+    width: 60%;
+    height: 45px;
+    padding: 0 10px;
+    border-radius: 7px;
+    outline: none;
+    transition: .3s;
+    font-family: 'Space Mono', monospace;
+    border: 2px solid gray;
+    margin-bottom: 10px;
+}
+
+.vacancy__input:focus {
+    border-color: var(--card-color2);
+    box-shadow: 0 0 10px var(--card-color2);
+}
+
+/* #region List */
+.list__element__more {
+    transition: all .3s linear;
+    height: 0;
+}
+
+.list__element__more--open {
+    height: 300px;
+}
+
+.vacancy__list__element {
+    user-select: none;
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    border: 2px solid gray;
+    padding: 0 10px;
+    transition: .2s;
+    border-radius: 7px;
+}
+
+.vacancy__list__element * {
+    pointer-events: none;
+}
+
+.vacancy__list__element:hover {
+    border-color: black;
+}
+
+.list__element__title {
+    height: 45px;
+    line-height: 45px;
+    font-family: var(--fontcode);
+}
+
+.list__element__top {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vacancy__content {
+    width: 60%;
+}
+
+.vacancy__list {
+    width: 100%;
+}
+
+.list__element__icon>i {
+    pointer-events: none;
+}
+
+/* #endregion */
+@media only screen and (max-width: 900px) {
+    .vacancy__section {
+        padding-top: 120px;
+    }
+
+    .vacancy__input,.vacancy__content {
+        width: 80%;
+    }
+}
