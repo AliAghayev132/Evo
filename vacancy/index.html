@@ -81,57 +81,81 @@
     </header>
     <main>
         <section class="vacancy__section">
-            <div class="vacancy__form">
-                <input class="vacancy__input" type="text" id="feducation" placeholder="Axtar">
-            </div>
-            <div class="vacancy__content">
-                <div class="vacancy__list">
-                    <ul>
-                        <li class="vacancy__list__element" data-element="1">
-                            <div class="list__element__top">
-                                <h3 class="list__element__title">
-                                    Front End Müəllimi
-                                </h3>
-                                <span class="list__element__icon">
-                                    <i class="fa-solid fa-caret-down"></i>
-                                </span>
-                            </div>
-                            <div class="list__element__more" data-more="1">
-                                <p>Əsl oğlan Front End Müəllimi lazımdır. İşində məsuliyyətli və çalışqan. Hər zaman
-                                    davamlı olaraq hazırlıqlı olan kişi kimi adam lazımdır.</p>
-                            </div>
-                        </li>
-                        <li class="vacancy__list__element" data-element="2">
-                            <div class="list__element__top">
-                                <h3 class="list__element__title">
-                                    Front End Müəllimi
-                                </h3>
-                                <span class="list__element__icon">
-                                    <i class="fa-solid fa-caret-down"></i>
-                                </span>
-                            </div>
-                            <div class="list__element__more" data-more="2">
-                                <p>Əsl oğlan Front End Müəllimi lazımdır. İşində məsuliyyətli və çalışqan. Hər zaman
-                                    davamlı olaraq hazırlıqlı olan kişi kimi adam lazımdır.</p>
-                            </div>
-                        </li>
-                        <li class="vacancy__list__element" data-element="3">
-                            <div class="list__element__top">
-                                <h3 class="list__element__title">
-                                    Front End Müəllimi
-                                </h3>
-                                <span class="list__element__icon">
-                                    <i class="fa-solid fa-caret-down"></i>
-                                </span>
-                            </div>
-                            <div class="list__element__more" data-more="3">
-                                <p>Əsl oğlan Front End Müəllimi lazımdır. İşində məsuliyyətli və çalışqan. Hər zaman
-                                    davamlı olaraq hazırlıqlı olan kişi kimi adam lazımdır.</p>
-                            </div>
-                        </li>
-                    </ul>
+            <form class="vacancy__form custom__form">
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="form__label">
+                            Ad
+                        </label>
+                        <input type="text" class="form__input vacancy__input" required>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label">
+                            Soyad
+                        </label>
+                        <input type="text" class="form__input vacancy__input" required>
+                    </div>
                 </div>
-            </div>
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="form__label">
+                            Email
+                        </label>
+                        <input type="text" class="form__input vacancy__input" required>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label">
+                            Doğum Tarixi
+                        </label>
+                        <input type="date" class="form__input vacancy__input" required>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="form__label">
+                            Mobil
+                        </label>
+                        <input type="text" class="form__input vacancy__input" required>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label">
+                            Müraciət Etdiyiniz Sahə
+                        </label>
+                        <select class="form__input vacancy__input vacancy__select">
+                            <option>Kiber Təhlükəsizlik</option>
+                            <option>IT və Help Desk</option>
+                            <option>Qrafik Dizayn</option>
+                            <option>İnteryer Dizayn</option>
+                            <option>Extryer Dizayn</option>
+                            <option>QA Testing</option>
+                            <option>Motion Dizayn</option>
+                            <option>Veb Dizayn</option>
+                            <option>Mobil Proqramlaşdırma</option>
+                            <option>Veb Proqramlaşdırma</option>
+                            <option>Kiber Təhlükəsizlik</option>
+                            <option>IT və Helpdesk</option>
+                            <option>Veb Proqramlaşdırma</option>
+                            <option>Mobil Proqramlaşdırma</option>
+                            <option>Oyun Proqramlaşdırma</option>
+                            <option>3D modelləşdirmə</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="form__label">
+                            Linkedln
+                        </label>
+                        <input type="text" class="form__input vacancy__input" required>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label">
+                            Github
+                        </label>
+                        <input type="text" class="form__input vacancy__input" required>
+                    </div>
+                </div>
+            </form>
         </section>
         <div class="background">
             <img src="../src/images/binary.png">
@@ -154,26 +178,8 @@
                         <li>IT və Helpdesk</li>
                     </ul>
                 </div>
+
                 <div>
-                    <a class="footer__link">
-                        Əlaqə
-                    </a>
-                    <div class="footer__contact">
-                        <a href="https://www.facebook.com/orderhub.az/" class="footer__contact__link">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="footer__contact__link">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="mailto:aliaghayev132@gmail.com" class="footer__contact__link">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <span class="footer__text">
-                        Ünvan
-                    </span>
                     <div class="footer__map">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.4590746003187!2d49.83946631558835!3d40.37651697936988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307da5a4c85e9f%3A0x8b209a8e1ed5eea9!2sAF%20Mall!5e0!3m2!1str!2s!4v1674965524206!5m2!1str!2s"
@@ -181,6 +187,19 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer__contact">
+                <a href="https://www.facebook.com/orderhub.az/" class="footer__contact__link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="footer__contact__link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:aliaghayev132@gmail.com" class="footer__contact__link">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
             </div>
         </div>
         <h5 class="God_of_Site">by Ali Aghayev</h5>

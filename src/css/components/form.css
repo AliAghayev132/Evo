@@ -1,0 +1,31 @@
+.custom__form {
+    gap: 10px;
+}
+
+.form__label {
+    padding-left: 2.5px;
+    font-family: var(--fontcode);
+}
+
+.form__input {
+    height: 45px;
+    width: 500px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1em;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px 10px;
+    transition: .3s ease all;
+}
+
+.form__row {
+    display: flex;
+    gap: 20px;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5px;
+}

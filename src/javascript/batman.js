@@ -62,7 +62,6 @@
         }
     }
     const batman = new Batman;
-
     img.onload = () => {
         setInterval(() => {
             batman.update();

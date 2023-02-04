@@ -3,7 +3,7 @@
 footer {
     background-color: var(--bg-color1);
     text-align: center;
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 .footer__content__row {
@@ -29,9 +29,9 @@ footer {
 .God_of_Site {
     font-family: 'Space Mono', monospace;
     font-size: 1em;
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    border-top: 2px solid black;
+    padding: 5px 20px 10px 20px;
 }
 
 .footer__link,
@@ -39,44 +39,59 @@ footer {
     margin-bottom: 20px;
     width: 300px;
     font-size: 1.75em;
-    font-family: 'Space Mono', monospace;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;    
     display: inline-block;
 }
 
 .footer__education {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     text-align: left;
-    text-align: center;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-family: monospace;
 }
 
+.footer__education__row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
 .footer__map {
+    height: 100%;
+    align-items: center;
+    display: flex;
     padding-left: 20px;
+    justify-content: center;
 }
 
 .footer__map>iframe {
-    width: 95%;
+    width: 80%;
 }
 
 .footer__contact {
     display: flex;
+    margin-top: 10px;
     justify-content: center;
     gap: 2px;
-    margin-bottom: 25px;
 }
+
 .footer__contact__link:nth-child(1) {
     color: black;
     font-size: 1.8em;
 }
-.footer__contact__link:nth-child(2){
+
+.footer__contact__link:nth-child(2) {
     font-size: 1.9em;
-} 
-.footer__contact__link:nth-child(3){
+}
+
+.footer__contact__link:nth-child(3) {
     font-size: 1.8em;
 }
+
 .footer__contact__link i:hover:before {
     background-color: transparent;
     background: none;
@@ -108,14 +123,52 @@ footer {
 }
 
 .footer__contact__link:nth-child(3):hover {
-    background:linear-gradient(45deg, #8e36e0 0%, #164b92 100%);
+    background: linear-gradient(45deg, #8e36e0 0%, #164b92 100%);
 }
 
-.footer__contact__link:hover{
-    color: white!important;
+.footer__contact__link:hover {
+    color: white !important;
 }
-.footer__contact__link > i {
+
+.footer__contact__link>i {
     pointer-events: none;
+}
+.footer__edu__link{
+    padding: 10px;
+    position: relative;
+}
+
+.footer__edu__link:after,
+.footer__edu__link:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0px solid transparent;
+    width: 0%;
+    height: 0%;
+    transition: all 0.6s ease;
+}
+.footer__edu__link:after {
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+.footer__edu__link:before {
+    width: 0%;
+    height: 0%;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+.footer__edu__link:hover::before,
+.footer__edu__link:hover::after {
+    width: 10px;
+    height: 10px;
+    border-color: black;
 }
 
 @media only screen and (max-width: 970px) {
@@ -131,5 +184,15 @@ footer {
 
     .footer__map {
         padding: 0;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .footer__education__row{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer__education{
+        text-align: center!important;
     }
 }

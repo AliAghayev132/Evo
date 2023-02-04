@@ -2,38 +2,30 @@
 @import './components/header.css';
 @import './components/footer.css';
 @import './components/background.css';
+@import './components/form.css';
 
 .vacancy__section {
     min-height: 100vh;
     padding-top: 80px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .vacancy__form {
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     display: flex;
     width: 100%;
 }
-
-.vacancy__input {
-    width: 60%;
-    height: 45px;
-    padding: 0 10px;
-    border-radius: 7px;
-    outline: none;
-    transition: .3s;
-    font-family: 'Space Mono', monospace;
-    border: 2px solid gray;
-    margin-bottom: 10px;
+.vacancy__input{
+    width: 400px;
 }
-
-.vacancy__input:focus {
-    border-color: var(--card-color2);
-    box-shadow: 0 0 10px var(--card-color2);
+.vacancy__select{
+    padding: 5px 10px;
 }
-
 /* #region List */
 .list__element__more {
     transition: all .3s linear;
@@ -95,7 +87,8 @@
         padding-top: 120px;
     }
 
-    .vacancy__input,.vacancy__content {
+    .vacancy__input,
+    .vacancy__content {
         width: 80%;
     }
 }
