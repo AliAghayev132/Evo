@@ -23,7 +23,8 @@
             <div class="nav__mid">
                 <ul class="header__nav__links">
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="">Ana səhifə</a>
+                        <a class="header__nav__link">Ana səhifə</a>
+                        <!-- Thank You Azad 05.02.2023 | 01:52 | -->
                     </li>
                     <li class="header__nav__item">
                         <a class="header__nav__link" href="./education/">Tədris</a>
@@ -32,10 +33,10 @@
                         <a class="header__nav__link" href="./vacancy/">Vakansiyalar</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link">Haqqımızda</a>
+                        <a class="header__nav__link" href="#">Haqqımızda</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link">Əlaqə</a>
+                        <a class="header__nav__link" href="#">Əlaqə</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +60,7 @@
         <div class="hamburger__menu">
             <div class="hamburger__menu__bg">
                 <div class="hamburger__link">
-                    <a class="" href="/">Ana Səhifə</a>
+                    <a class="">Ana Səhifə</a>
                     <a class="" href="./education/">Tədris</a>
                     <a class="" href="./vacancy/">Vakansiyalar</a>
                     <a class="" href="./about/">Haqqımızda</a>
@@ -103,7 +104,7 @@
                 </div>
                 <div class="about__description">
                     Sağdaki uzun saç Ali Aghayev.
-                    Solumdaki EVO MMC nin Allahıdır.
+                    Solumdaki EVO MMC nin BOSSU.
                 </div>
             </div>
             <div class="about__right">
@@ -113,58 +114,143 @@
                     </div>
                 </div>
             </div>
-
         </section>
         <section class="education__section">
+            <button class="education__button">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="education__button">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
             <div class="education__title">
                 Kurslarımız
             </div>
             <div class="education__content">
                 <div class="education__carousel">
                     <div class="education__cards">
-                        <div class="education__card education__card--1">
-                            <div class="education__image">
-                                <i class="icofont-computer"></i>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color1)" class="education__card">
+                                <div class="education__image">
+                                    <i class="icofont-computer"></i>
+                                </div>
+                                <h3 class="education__card__title">
+                                    IT və Helpdesk
+                                </h3>
                             </div>
-                            <h3 class="education__card__title">
-                                IT və Helpdesk
-                            </h3>
                         </div>
-                        <div class="education__card education__card--2">
-                            <div class="education__image">
-                                <i class="icofont-dashboard-web"></i>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color2)" class="education__card education__card--2">
+                                <div class="education__image">
+                                    <i class="icofont-dashboard-web"></i>
+                                </div>
+                                <h3 class="education__card__title">
+                                    Veb
+                                    <br>
+                                    Proqramlaşdırma
+                                </h3>
                             </div>
-                            <h3 class="education__card__title">
-                                Veb
-                                <br>
-                                Proqramlaşdırma
-                            </h3>
                         </div>
-                        <div class="education__card education__card--3">
-                            <div class="education__image">
-                                <i class="icofont-smart-phone"></i>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color3)" class="education__card education__card--3">
+                                <div class="education__image">
+                                    <i class="icofont-smart-phone"></i>
+                                </div>
+                                <h3 class="education__card__title">
+                                    Mobil
+                                    <br>
+                                    Proqramlaşdırma
+                                </h3>
                             </div>
-                            <h3 class="education__card__title">
-                                Mobil
-                                <br>
-                                Proqramlaşdırma
-                            </h3>
                         </div>
-                        <div class="education__card education__card--4">
-                            <div class="education__image">
-                                <i class="icofont-console"></i>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color4)" class="education__card education__card--4">
+                                <div class="education__image">
+                                    <i class="icofont-console"></i>
+                                </div>
+                                <h3 class="education__card__title">
+                                    Kiber <br> Təhlükəsizlik
+                                </h3>
                             </div>
-                            <h3 class="education__card__title">
-                                Kiber <br> Təhlükəsizlik
-                            </h3>
                         </div>
-                        <div class="education__card education__card--5">
-                            <div class="education__image">
-                                <i class="icofont-game"></i>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color5)" class="education__card education__card--5">
+                                <div class="education__image">
+                                    <i class="icofont-game"></i>
+                                </div>
+                                <h3 class="education__card__title">
+                                    Oyun <br> Proqramlaşdırma
+                                </h3>
                             </div>
-                            <h3 class="education__card__title">
-                                Oyun <br> Proqramlaşdırma
-                            </h3>
+                        </div>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color6)" class="education__card education__card--5">
+                                <div class="education__image">
+                                    <img src="./src/icons/courses/3d.svg">
+                                </div>
+                                <h3 class="education__card__title">
+                                    3D <br> Modelləşdirmə
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color7)" class="education__card education__card--5">
+                                <div class="education__image">
+                                    <img src="./src/icons/courses/exterior.svg">
+                                </div>
+                                <h3 class="education__card__title">
+                                    Exteryer <br> Dizayn
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color8)" class="education__card education__card--5">
+                                <div class="education__image">
+                                    <img src="./src/icons/courses/graphic.svg">
+                                </div>
+                                <h3 class="education__card__title">
+                                    Grafik <br> Dizayn
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color9)" class="education__card education__card--5">
+                                <div class="education__image">
+                                    <img src="./src/icons/courses/interior.svg">
+                                </div>
+                                <h3 class="education__card__title">
+                                    Interyer <br> Dizayn
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color10)" class="education__card education__card--5">
+                                <div class="education__image">
+                                    <img src="./src/icons/courses/motion.svg">
+                                </div>
+                                <h3 class="education__card__title">
+                                    Motion <br> Dizayn
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color11)" class="education__card education__card--5">
+                                <div class="education__image">
+                                    <img src="./src/icons/courses/qa.svg">
+                                </div>
+                                <h3 class="education__card__title">
+                                    QA Testi
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="education__slide">
+                            <div style="--card-color:var(--card-color12)" class="education__card education__card--5">
+                                <div class="education__image">
+                                    <img src="./src/icons/courses/ux.svg">
+                                </div>
+                                <h3 class="education__card__title">
+                                    UI UX
+                                </h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -181,12 +267,12 @@
                         <input placeholder="Ad" class="form__input" type="text" id="fname" autocomplete="off" required>
                         <input placeholder="Soyad" class="form__input" type="text" id="fsurname" autocomplete="off"
                             required>
-                        <div class="form__element">
+                        <div class="form__element form__input">
                             <span>(+994)</span>
-                            <input placeholder="XX-XXX-XX-XX" type="number" autocomplete="off" required>
+                            <input id="fnumber" placeholder="XX-XXX-XX-XX" type="number" autocomplete="off" required>
                         </div>
                         <input placeholder="Email" class="form__input" type="email" autocomplete="off" required>
-                        <select class="form__select">
+                        <select class="form__input">
                             <option>Maraqlandığınız Sahə</option>
                             <option>Front End Proqramlaşdırma</option>
                             <option>Back End Proqramlaşdırma</option>
@@ -199,28 +285,7 @@
                         </select>
                         <button class="form__button">Müraciət et</button>
                     </form>
-                    <div class="contact__about">
-                        <div class="contact__about__row">
-                            <span class="contact__about__title">Ünvan</span>
-                            <span class="contact__about__text">
-                                AF Mall, 3-cü mərtəbə
-                                <br>
-                                (28 May mst. yaxınlığı)
-                            </span>
-                        </div>
-                        <div class="contact__about__row">
-                            <span class="contact__about__title">Mobil</span>
-                            <span class="contact__about__text">
-                                +9940507733452
-                            </span>
-                        </div>
-                        <div class="contact__about__row">
-                            <span class="contact__about__title">Email</span>
-                            <span class="contact__about__text">
-                                evolearningcenter@gmail.com
-                            </span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -298,4 +363,5 @@
     <script src="./src/javascript/carousel.js"></script>
     <script src="./src/javascript/batman.js"></script>
     <script type="module" src="./src/javascript/circle.js"></script>
+    <script type="module" src="./src/javascript/pages/index.js"></script>
 </body>

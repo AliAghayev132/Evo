@@ -1,14 +1,14 @@
 @import '../css/root.css';
-@import url('./components/header.css');
-@import url('./components/footer.css');
-@import url('./components/background.css');
-
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/background.css';
+@import './components/form.css';
 
 .home__section {
     position: relative;
     height: 100vh;
     width: 100%;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--fontcode3);
     pointer-events: none;
     display: flex;
     align-items: center;
@@ -66,6 +66,8 @@
 /* #region About Section*/
 .about__section {
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 0 50px;
     display: flex;
     height: 100vh;
@@ -106,9 +108,9 @@
 
 .about__description {
     text-align: left;
-    font-size: 2.5vw;
+    font-size: 1.5em;
     width: 70%;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--fontcode3);
 }
 
 .about__content {
@@ -226,7 +228,7 @@
     }
 }
 
-/* #endregion */
+/* #endregion  Education*/
 .education__content {
     margin: 0 auto;
     width: 90%;
@@ -248,8 +250,26 @@
 }
 
 .education__section {
+    position: relative;
     background-color: var(--bg-color1);
     padding: 50px 0;
+}
+
+.education__button {
+    position: absolute;
+    background-color: transparent;
+    font-size: 3em;
+    top: 50%;
+    border: none;
+    transform: translateY(-50%);
+}
+
+.education__button:nth-child(1) {
+    left: 1%;
+}
+
+.education__button:nth-child(2) {
+    right: 1%;
 }
 
 .education__title {
@@ -261,6 +281,8 @@
 
 .education__card {
     height: 220px;
+    max-width: 260px;
+    width: 100%;
     display: inline-block;
     background-color: white;
     transition: .3s;
@@ -269,6 +291,11 @@
     padding: 20px;
     position: relative;
     overflow: hidden;
+}
+
+.education__slide {
+    justify-content: center;
+    display: flex;
 }
 
 .education__card::after {
@@ -295,96 +322,44 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    background-color: var(--card-color);
+}
+
+.education__image>img {
+    fill: white;
+    width: 70%;
+}
+
+.education__image img path {
+    fill: white;
 }
 
 .education__card__title {
     position: relative;
     z-index: 3;
     margin-top: 20px;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--fontcode3);
     user-select: none;
     transition: .4s;
     font-size: 1em
 }
 
-.education__card--1 .education__image {
-    background-color: var(--card-color1);
-}
-
-.education__card--2 .education__image {
-    background-color: var(--card-color2);
-}
-
-.education__card--3 .education__image {
-    background-color: var(--card-color3);
-}
-
-.education__card--4 .education__image {
-    background-color: var(--card-color4);
-}
-
-.education__card--5 .education__image {
-    background-color: var(--evo--color);
-}
-
-.education__card--1:hover::after {
+.education__card:hover::after {
     transform: scale(1.5);
-    background-color: var(--card-color1);
+    background-color: var(--card-color);
     border-radius: 0%;
-
 }
 
-.education__card--1:hover .education__card__title {
+.education__card:hover .education__card__title {
     color: white;
 }
 
-.education__card--2:hover::after {
-    transform: scale(1.5);
-    border-radius: 0%;
-
-    background-color: var(--card-color2);
-}
-
-.education__card--2:hover .education__card__title {
-    color: white;
-}
-
-.education__card--3:hover::after {
-    border-radius: 0%;
-    transform: scale(1.5);
-
-    background-color: var(--card-color3);
-}
-
-.education__card--3:hover .education__card__title {
-    color: white;
-}
-
-.education__card--4:hover::after {
-    transform: scale(1.5);
-    border-radius: 0%;
-    background-color: var(--card-color4);
-}
-
-.education__card--4:hover .education__card__title {
-    color: white;
-}
-
-.education__card--5:hover::after {
-    border-radius: 0%;
-    transform: scale(1.5);
-    background-color: var(--evo--color);
-}
-
-.education__card--5:hover .education__card__title {
-    color: white;
-}
-
+/* #endregion */
+/* #region Contact */
 
 .batmancanvas {
     margin-top: 10px;
 }
-
 
 .contact__section {
     width: 100%;
@@ -405,44 +380,29 @@
     display: flex;
     justify-content: center;
 }
-
 .contact__row>form {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     font-family: var(--fontcode);
     display: flex;
 }
-
 /* Thank You Asmar 29.01.2023 || 15.06 */
-.form__input {
-    height: 50px;
-    width: 500px;
-    font-family: 'Space Mono', monospace;
-    font-size: 1em;
-    border: 2px solid var(--bg-color1);
-    border-radius: 5px;
-    outline: none;
-    padding: 15px 10px;
-    transition: .3s;
-}
-
+/* #endregion */
 .form__element {
     align-items: center;
-    border: 2px solid var(--bg-color1);
+    border: 2px solid black;
     display: flex;
     padding-left: 5px;
     gap: 10px;
     height: 50px;
 }
-
 .form__element>* {
     border: none;
     font-size: 1em;
 }
-
 .form__element>input,
 .form__element>input:focus {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--fontcode3);
     outline: none;
     border: none;
 }
@@ -452,16 +412,7 @@
     font-size: 1.25em;
 }
 
-.form__select {
-    font-size: 1em;
-    height: 50px;
-}
-
 /* #endregion */
-
-.form__input:focus {
-    border-color: var(--evo--color) !important;
-}
 
 .form__button {
     font-size: 1.5em;
@@ -472,13 +423,11 @@
     transition: .3s;
     border: 2px solid black;
 }
-
 .form__button:hover {
     background-color: var(--evo--color);
     border-color: white;
     color: white;
 }
-
 .contact__row {
     gap: 50px;
     border-radius: 2px;
@@ -486,44 +435,6 @@
     padding: 20px;
     display: flex;
 }
-
-.contact__about {
-    height: 100%;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    justify-content: center;
-}
-
-.contact__about__row {
-    border-bottom: 2px solid black;
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    gap: 5px;
-    padding-right: 30px;
-    flex-direction: column;
-}
-
-.contact__about__text {
-    display: block;
-    font-family: monospace;
-    font-weight: 600;
-    font-size: 1.25em;
-    margin-bottom: 10px;
-}
-
-.contact__about__row>.fa-location-pin {
-    font-size: 2em;
-}
-
-.contact__about__title {
-    font-size: 1.5em;
-    font-family: var(--fontcode);
-}
-
 .education__image>i {
     font-size: 4em;
     color: white;

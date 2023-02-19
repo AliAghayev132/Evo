@@ -10,13 +10,18 @@
 .form__input {
     height: 45px;
     width: 500px;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--fontcode3);
     font-size: 1em;
     border: 2px solid black;
     border-radius: 5px;
     outline: none;
-    padding: 15px 10px;
+    padding: 0 10px;
     transition: .3s ease all;
+}
+
+.form__input:focus {
+    border-color: var(--card-color2);
+    box-shadow: 0 0 10px var(--card-color2);
 }
 
 .form__row {
@@ -28,4 +33,9 @@
     display: flex;
     flex-direction: column;
     gap: 2.5px;
+}
+
+.form__focus {
+    border-color: var(--card-color2) !important;
+    box-shadow: 0 0 10px var(--card-color2) !important;
 }

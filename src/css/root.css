@@ -1,15 +1,23 @@
-@import url('../icons/brands.css');
-@import url('../icons/solid.css');
-@import url('./icofont.min.css');
+/* Header__location 42px 60px */
+
+@import './components/icons.css';
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 @font-face {
-    font-family: 'EVO';
-    src: url('../fonts/Itim-Regular.ttf');
+    font-family: 'Space Mono';
+    src: url('../fonts/SpaceMono-Bold.ttf');
 }
+
+@font-face {
+    font-family: 'Francois One';
+    src: url('../fonts/FrancoisOne-Regular.ttf');
+    font-weight: 400;
+}
+
 @font-face {
     font-family: 'Gillroy';
     src: url('../fonts/Gilroy-ExtraBold.otf');
+    font-weight: 400;
 }
 
 @font-face {
@@ -20,13 +28,22 @@
 }
 
 :root {
-    --fontcode: 'EVO';
+    --fontcode: 'Francois One';
     --fontcode2: 'Gillroy';
+    --fontcode3: 'Space Mono';
     --evo--color: #3E57E8;
     --card-color1: #F72585;
     --card-color2: #4CC9F0;
     --card-color3: #4361EE;
     --card-color4: #7209B7;
+    --card-color5: #D61355;
+    --card-color6: #F94A29;
+    --card-color7: #FCE22A;
+    --card-color8: #30E3DF;
+    --card-color9: #4D77FF;
+    --card-color10: #091353;
+    --card-color11: #9D84B7;
+    --card-color12: #B2F9FC;
     --bg-color1: #F1F1F1;
     --title-font: 4em;
 }
@@ -41,6 +58,7 @@
 
 a {
     color: inherit;
+    cursor: pointer;
 }
 
 .container {
@@ -71,7 +89,7 @@ body::-webkit-scrollbar {
     z-index: 4;
     position: fixed;
     opacity: 0;
-    top: 85px;
+    top: 102px;
     right: 5px;
     border-radius: 30px;
     width: 5px;
@@ -97,6 +115,7 @@ html {
 
 .whatsapp {
     background-color: #25d366;
+    z-index: 3;
     line-height: 60px;
     text-align: center;
     bottom: 20px;
@@ -106,6 +125,25 @@ html {
     color: white;
     height: 60px;
     width: 63px;
+    transform: scale(1);
+    animation: pulse-black 2s infinite;
+}
+
+@keyframes pulse-black {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 #25d366;
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px #25d36500;
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 #25d36500;
+    }
 }
 
 .whatsapp>a>i {
@@ -118,9 +156,6 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
-
-
 
 [class*=" icofont-"],
 [class^=icofont-] {
@@ -174,4 +209,12 @@ input::-webkit-inner-spin-button {
 
 .fa-circle-xmark::before {
     content: "\f057";
+}
+
+.fa-chevron-left::before {
+    content: "\f053";
+}
+
+.fa-chevron-right::before {
+    content: "\f054";
 }

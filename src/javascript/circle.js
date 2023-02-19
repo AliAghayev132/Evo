@@ -10,7 +10,7 @@ import { $, random } from "./custom.js";
                         random(0, canvas.width),
                         random(0, canvas.height),
                         random(1, 4),
-                        colors[random(0, 5)])
+                        colors[random(0, colors.length - 1)])
                 );
     }
     function drawCircle(par) {
@@ -49,7 +49,21 @@ import { $, random } from "./custom.js";
     })
 
     let circlesSizes = 100, circles = [];
-    const colors = ["#3E57E8", "#F72585", "#4CC9F0", "#4361EE", "#7209B7"],
+    const colors = [
+        "#3E57E8",
+        "#F72585",
+        "#4CC9F0",
+        "#4361EE",
+        "#7209B7",
+        "#D61355",
+        "#F94A29",
+        "#FCE22A",
+        "#30E3DF",
+        "#4D77FF",
+        "#091353",
+        "#9D84B7",
+        "#B2F9FC"
+    ],
         canvas = $('.circlecanvas'),
         ctx = canvas.getContext('2d');
 

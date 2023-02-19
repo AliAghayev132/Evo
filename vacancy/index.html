@@ -11,14 +11,20 @@
 
 <body>
     <header>
+        <div class="header__location">
+            <span>
+                Ünvan: AF Mall, 3-cü mərtəbə, Səməd Vurğun küç. 34 &nbsp;&nbsp; TEL: (050) 773 34 52
+            </span>
+        </div>
         <nav class="header__nav">
             <div class="nav__left">
-                <a class="logo"><img src="../src/images/logo.svg" /></a>
+                <a class="logo" href="/"><img src="./src/images/logo.svg" /></a>
             </div>
             <div class="nav__mid">
                 <ul class="header__nav__links">
                     <li class="header__nav__item">
                         <a class="header__nav__link" href="../">Ana səhifə</a>
+                        <!-- Thank You Azad 05.02.2023 | 01:52 | -->
                     </li>
                     <li class="header__nav__item">
                         <a class="header__nav__link" href="../education/">Tədris</a>
@@ -27,20 +33,22 @@
                         <a class="header__nav__link">Vakansiyalar</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link">Haqqımızda</a>
+                        <a class="header__nav__link" href="#">Haqqımızda</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="#">Əlaqə</a>
                     </li>
                 </ul>
             </div>
             <div class="nav__right">
-                <span class="language">EN</span>
                 <a href="https://www.facebook.com/orderhub.az/" class="nav__link">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
                 <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="nav__link">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://goo.gl/maps/19Cmr2pPzbVuCLK5A" class="nav__link">
-                    <i class="fa-solid fa-location-pin"></i>
+                <a href="https://youtube.com/watch?v=DeDekPSCY-E&list=LL&index=27" class="nav__link">
+                    <i class="fa-brands fa-youtube"></i>
                 </a>
                 <div class="menu__icon">
                     <span></span>
@@ -52,10 +60,11 @@
         <div class="hamburger__menu">
             <div class="hamburger__menu__bg">
                 <div class="hamburger__link">
-                    <a class="" href="/">Ana Səhifə</a>
-                    <a class="" href="./education">Tədris</a>
-                    <a class="" href="./events">Tədbirlər</a>
-                    <a class="" href="./about">Haqqımızda</a>
+                    <a class="">Ana Səhifə</a>
+                    <a class="" href="./education/">Tədris</a>
+                    <a class="" href="./vacancy/">Vakansiyalar</a>
+                    <a class="" href="./about/">Haqqımızda</a>
+                    <a class="" href="./contact/">Əlaqə</a>
                     <div class="hamburger__icons">
                         <a href="https://www.facebook.com/orderhub.az/">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -63,17 +72,12 @@
                         <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <a href="https://youtube.com/watch?v=DeDekPSCY-E&list=LL&index=27">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                         <a href="https://goo.gl/maps/19Cmr2pPzbVuCLK5A">
                             <i class="fa-solid fa-location-pin"></i>
                         </a>
-                    </div>
-                    <div class="hamburger__languages">
-                        <span title="Azərbaycan Dili">AZ</span>
-                        <span title="English Language">EN</span>
-                        <span title="Pусский Язык">RU</span>
                     </div>
                 </div>
             </div>
@@ -81,6 +85,7 @@
     </header>
     <main>
         <section class="vacancy__section">
+            <h2 class="vacancy__title">Bizə Qatıl</h2>
             <form class="vacancy__form custom__form">
                 <div class="form__row">
                     <div class="form__field">
@@ -155,6 +160,28 @@
                         <input type="text" class="form__input vacancy__input" required>
                     </div>
                 </div>
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="form__label">
+                            CV
+                        </label>
+                        <label for="ffile" class="form__input vacancy__input file__input">
+                            Fayl yüklə
+                            <i class="fa-solid fa-file"></i>
+                        </label>
+                        <input id="ffile" type="file" class="form__input vacancy__input" required hidden>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label">
+                            İş Rejimi
+                        </label>
+                        <select class="form__input vacancy__input vacancy__select">
+                            <option>Part Time</option>
+                            <option>Full Time</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="vacancy__button" type="submit">Göndər</button>
             </form>
         </section>
         <div class="background">
@@ -171,14 +198,29 @@
                     <a class="footer__link">
                         Tədris
                     </a>
-                    <ul class="footer__education">
-                        <li>Mobil Proqramlaşdırma</li>
-                        <li>Veb Proqramlaşdırma</li>
-                        <li>Kiber Təhlükəsizlik</li>
-                        <li>IT və Helpdesk</li>
-                    </ul>
+                    <div class="footer__education__row">
+                        <ul style="text-align: right;" class="footer__education">
+                            <li><a href="#" class="footer__edu__link">Mobil Proqramlaşdırma</a></li>
+                            <li><a href="#" class="footer__edu__link">Veb Proqramlaşdırma</a></li>
+                            <li><a href="#" class="footer__edu__link">Kiber Təhlükəsizlik</a></li>
+                            <li><a href="#" class="footer__edu__link">IT və Helpdesk</a></li>
+                            <li><a href="#" class="footer__edu__link">Veb Proqramlaşdırma</a></li>
+                            <li><a href="#" class="footer__edu__link">Mobil Proqramlaşdırma</a></li>
+                            <li><a href="#" class="footer__edu__link">Oyun Proqramlaşdırma</a></li>
+                            <li><a href="#" class="footer__edu__link">3D modelləşdirmə</a></li>
+                        </ul>
+                        <ul class="footer__education">
+                            <li><a href="#" class="footer__edu__link">Kiber Təhlükəsizlik</a></li>
+                            <li><a href="#" class="footer__edu__link">IT və Help Desk</a></li>
+                            <li><a href="#" class="footer__edu__link">Qrafik Dizayn</a></li>
+                            <li><a href="#" class="footer__edu__link">İnteryer Dizayn</a></li>
+                            <li><a href="#" class="footer__edu__link">Extryer Dizayn</a></li>
+                            <li><a href="#" class="footer__edu__link">QA Testing</a></li>
+                            <li><a href="#" class="footer__edu__link">Motion Dizayn</a></li>
+                            <li><a href="#" class="footer__edu__link">Veb Dizayn</a></li>
+                        </ul>
+                    </div>
                 </div>
-
                 <div>
                     <div class="footer__map">
                         <iframe

@@ -1,61 +1,83 @@
-const EDUCATION = {
-    cards: document.querySelector('.education__cards'),
-    carousel: document.querySelector('.education__carousel')
+const delay = 2000;
+const checkSizes = () => {
+    const width = window.innerWidth;
+    if (width > 1400) perView = 5;
+    else if (width > 1200) perView = 4;
+    else if (width > 1000) perView = 3;
+    else if (width > 800) perView = 2;
+    else perView = 1
+    cards.setAttribute('style', `--per-view:${perView}`);
 }
-let perView = 5;
-EDUCATION.cards.style.setProperty('--per-view', perView);
-for (let i = 0; i < perView; ++i) {
-    EDUCATION.cards.insertAdjacentHTML('beforeend', EDUCATION.cards.children[i].outerHTML);
+const scroll = dir => {
+    if (dir == "RIGHT") {
+        ++currentPos;
+        clearTimeout(autoScroll);
+    } else if (dir === "LEFT") {
+        --currentPos;
+        clearTimeout(autoScroll);
+    } else {
+        ++currentPos;
+    }
+
+    if (currentPos > cards.children.length - perView) {
+        currentPos = 1;
+        cards.style.transition = '';
+        cards.style.left = '';
+    } else if (currentPos < 0) {
+        currentPos = cards.children.length - perView - 1;
+        cards.style.transition = '';
+        cards.style.left = `-${(cards.children.length - perView) * width}px`;
+    }
+    width = cards.children[0].offsetWidth + 24;
+    cards.style.transition = '.3s';
+    cards.style.left = `-${currentPos * width}px`;
+    autoScroll = setTimeout(scroll, delay);
 }
-updateCarousel();
+const initCarousel = () => {
+    for (let i = 0; i < perView; ++i) {
+        cards.insertAdjacentHTML('beforeend', cards.children[i].outerHTML);
+    }
+
+}
+const BTN = {
+    left: document.querySelectorAll('.education__button')[0],
+    right: document.querySelectorAll('.education__button')[1],
+}, cards = document.querySelector('.education__cards'),
+    carousel = document.querySelector('.education__carousel');
+let width = cards.children[0].offsetWidth + 24,
+    perView = 5,
+    currentPos = 0;
+autoScroll = null;
+
+cards.setAttribute('style', `--per-view:${perView}`);
+
+BTN.left.addEventListener('click', () => {
+    scroll("LEFT");
+})
+BTN.right.addEventListener('click', () => {
+    scroll("RIGHT");
+})
+window.addEventListener('resize', e => {
+    checkSizes();
+})
+window.addEventListener('load', e => {
+    checkSizes();
+    autoScroll = setTimeout(scroll, delay);
+})
+
+initCarousel();
+
 {
-    let width = EDUCATION.cards.children[0].offsetWidth + 24;
-    let index = 0;
-    let autoscroll = setInterval(scroll, 1000);
-    function scroll() {
-        index++;
-        if (index == EDUCATION.cards.children.length - perView + 1) {
-            clearInterval(autoscroll);
-            index = 1;
-            EDUCATION.cards.style.transition = '0s';
-            EDUCATION.cards.style.left = '0';
-            autoscroll = setInterval(scroll, 2500);
+    let inContent = false;
+    document.addEventListener('mousemove', ({ target }) => {
+        if (target.classList.contains('education__card') && !inContent) {
+            console.log("Hey");
+            clearTimeout(autoScroll);
+            inContent = true;
+        } else if (!target.classList.contains('education__card') && inContent) {
+            console.log("Hi");
+            autoScroll = setTimeout(scroll, delay);
+            inContent = false;
         }
-        width = EDUCATION.cards.children[0].offsetWidth + 24;
-        EDUCATION.cards.style.left = `-${index * width}px`;
-        EDUCATION.cards.style.transition = '.3s';
-    }
-    window.addEventListener('resize', () => {
-        updateCarousel();
-        resetCarousel()
     })
-    function resetCarousel(){
-        index = 0;
-        clearInterval(autoscroll);
-        autoscroll = setInterval(scroll, 2500);
-        width = EDUCATION.cards.children[0].offsetWidth + 24;
-        EDUCATION.cards.style.left = `-${index * width}px`;
-        EDUCATION.cards.style.transition = '.3s';
-    }
-
-    window.addEventListener('load', () => {
-        scroll();
-    })
-}
-
-
-
-function updateCarousel(){
-    if(window.innerWidth > 1400){
-        perView = 5;
-    }else if(window.innerWidth > 1000){
-        perView = 4;
-    }else if(window.innerWidth > 800){
-        perView = 3;
-    }else if(window.innerWidth > 600){
-        perView = 2;
-    }else{
-        perView = 1;
-    }
-    EDUCATION.cards.style.setProperty('--per-view', perView);
 }
