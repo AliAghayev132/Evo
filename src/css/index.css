@@ -380,12 +380,71 @@
     display: flex;
     justify-content: center;
 }
+
+.contact__row {
+    position: relative;
+    gap: 50px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 6px rgb(173 181 189 / 50%);
+    padding: 20px;
+    display: flex;
+}
+
 .contact__row>form {
     flex-direction: column;
     gap: 20px;
     font-family: var(--fontcode);
     display: flex;
 }
+
+.contact__about {
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+}
+.contact__about__item > * {
+    display: block;
+}
+.contact__about__item {
+    font-family: var(--fontcode);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    max-width: 70px;
+    transition: .4s ease all;
+    white-space: nowrap;
+    padding: 0 10px;
+    gap: 0 10px;
+    border-top: 25px solid var(--card-color1);
+    border-bottom: 25px solid var(--card-color1);
+    border-right: 25px solid transparent;
+    color: white;
+}
+.contact__about__item:nth-child(2){
+    border-color: var(--card-color2);
+    border-right-color: transparent;
+}
+.contact__about__item:nth-child(3){
+    border-color: var(--card-color3);
+    border-right-color: transparent;
+}
+
+.contact__about__text{
+    max-width: 0%;
+    display: block;
+    transition: .4s;
+    overflow: hidden;
+}
+.contact__about__item:hover{
+    max-width: 400px;
+}
+.contact__about__item:hover .contact__about__text{
+    max-width: 90%;
+}
+
 /* Thank You Asmar 29.01.2023 || 15.06 */
 /* #endregion */
 .form__element {
@@ -396,10 +455,12 @@
     gap: 10px;
     height: 50px;
 }
+
 .form__element>* {
     border: none;
     font-size: 1em;
 }
+
 .form__element>input,
 .form__element>input:focus {
     font-family: var(--fontcode3);
@@ -423,18 +484,13 @@
     transition: .3s;
     border: 2px solid black;
 }
+
 .form__button:hover {
     background-color: var(--evo--color);
     border-color: white;
     color: white;
 }
-.contact__row {
-    gap: 50px;
-    border-radius: 2px;
-    box-shadow: 1px 2px 6px rgb(173 181 189 / 50%);
-    padding: 20px;
-    display: flex;
-}
+
 .education__image>i {
     font-size: 4em;
     color: white;
