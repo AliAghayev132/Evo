@@ -59,7 +59,7 @@
     font-weight: 400;
 }
 
-.fa-instagram:hover::before {
+header .fa-instagram:hover::before {
     color: white;
     background: #f09433;
     background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -71,7 +71,7 @@
     content: "\f167";
 }
 
-.fa-youtube:hover::before {
+header .fa-youtube:hover::before {
     color: white;
     background-color: red;
 }
@@ -80,7 +80,7 @@
     content: "\f39e";
 }
 
-.fa-facebook-f:hover::before {
+header .fa-facebook-f:hover::before {
     color: white;
     background-color: rgb(66, 103, 178);
 }
