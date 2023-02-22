@@ -262,6 +262,7 @@
     top: 50%;
     border: none;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .education__button:nth-child(1) {
@@ -414,7 +415,7 @@
     align-items: center;
     cursor: pointer;
     max-width: 70px;
-    transition: .4s ease all;
+    transition: .4s ease max-width;
     white-space: nowrap;
     padding: 0 10px;
     gap: 0 10px;
@@ -435,7 +436,7 @@
 .contact__about__text{
     max-width: 0%;
     display: block;
-    transition: .4s;
+    transition: .4s ease max-width;
     overflow: hidden;
 }
 .contact__about__item:hover{
