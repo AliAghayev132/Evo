@@ -1,4 +1,4 @@
-import { $ } from "./custom.js";
+import { $ } from "../custom.js";
 const startDynamicText = par => {
     const dynamic__text = $(par.className),
         texts = par.texts;

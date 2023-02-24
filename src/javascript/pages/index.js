@@ -10,18 +10,42 @@
     })
 }
 // #endregion
-// #region
+
+
+
+// #region Index Import
+import createCircleAnimation from "../features/circle.js";
+import createBatmanAnimation from "../features/batman.js";
+import createCarouselAnimation from "../features/carousel.js";
+import startDynamicText from '../features/dynamictext.js';
+createCircleAnimation();
+createBatmanAnimation();
+createCarouselAnimation();
+startDynamicText({
+    className:".home__text",
+    texts:[
+        "Time Is Passing","The Future is Here"
+    ]
+})
+//#endregion
+
+
+
 {
-    let footerPosY = null;
-    let height = window.innerHeight;
-    const nav = document.querySelector('nav');
-    document.addEventListener('scroll', () => {
-        footerPosY = document.querySelector('footer').getBoundingClientRect().y + window.scrollY;
-        if (footerPosY < window.scrollY + height - 100) {
-            nav.classList.add('nav--close')
-        }else{
-            nav.classList.remove('nav--close')
+    const mouse = document.querySelector('.mouse__down');
+    let timeout = setTimeout(
+        () => {
+            mouse.style.opacity = 1;
+        }, 3000
+    )
+    document.addEventListener('scroll', (e) => {
+        mouse.style.opacity = 0;
+        clearTimeout(timeout);
+        if (window.scrollY <= 300) {
+            timeout = setTimeout(
+                () => {
+                    mouse.style.opacity = 1;
+                }, 3000)
         }
     })
 }
-// #endregion

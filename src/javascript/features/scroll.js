@@ -1,7 +1,7 @@
-{
+export default function createScrollAnimation() {
     let offset_y = 102;
     const scroll = document.querySelector('.scroll'),
-        window_height = this.innerHeight,
+        window_height = window.innerHeight,
         content_height = document.body.getBoundingClientRect().height;
     let scale = (content_height - offset_y) / (window_height - offset_y),
         timer = null;
@@ -18,22 +18,6 @@
         }, 3000)
     })
 }
-{
-    const mouse = document.querySelector('.mouse__down'),
-        home = document.querySelector('.home__section');
-    let timeout = setTimeout(
-        () => {
-            mouse.style.opacity = 1;
-        }, 3000
-    )
-    document.addEventListener('scroll', (e) => {
-        mouse.style.opacity = 0;
-        clearTimeout(timeout);
-        if (window.scrollY <= 300) {
-            timeout = setTimeout(
-                () => {
-                    mouse.style.opacity = 1;
-                }, 3000)
-        }
-    })
-}
+
+
+

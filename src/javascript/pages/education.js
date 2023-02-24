@@ -1,3 +1,4 @@
+//Menu
 {
     const menu = document.querySelector('.education__list'),
         btn = document.querySelector('.education__hamburger');

@@ -1,22 +1,8 @@
-import updateLangue from "./language.js";
-import startDynamicText from './dynamictext.js';
-import createHamburgerSystem from "./hamburger.js";
-// #region Language`
-{
-    const btn = document.querySelector('.language');
-    let state = "EN";
-    btn.addEventListener('click', () => {
-        updateLangue(state);
-        state = "AZ";
-        btn.innerHTML = state;
-    })
-}
-// #endregion
-startDynamicText(
-    {
-        className: ".home__text",
-        texts: ["Time is Passing", "The Future is Here"]
-    }
-)
-
+import createFooterAnimation from "./features/footer.js";
+import createScrollAnimation from "./features/scroll.js";
+import createHamburgerSystem from "./features/hamburger.js";
 createHamburgerSystem();
+createFooterAnimation();
+createScrollAnimation();
+
+window.onload = () => document.body.classList.remove('preload');

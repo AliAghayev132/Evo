@@ -4,7 +4,7 @@ footer {
     text-align: center;
     position: relative;
     background: #3586ff;
-    padding: 20px;
+    padding: 20px 0;
     margin-top: 200px;
     min-height: 200px;
 }
@@ -82,7 +82,10 @@ footer {
     display: inline-block;
     color: white;
 }
-
+.waves{
+    position: relative;
+    z-index: -1;
+}
 .wave {
     position: absolute;
     top: -90px;
@@ -91,6 +94,7 @@ footer {
     height: 100px;
     background: url("https://i.ibb.co/wQZVxxk/wave.png");
     background-size: 1000px 100px;
+
 }
 
 .wave#wave1 {

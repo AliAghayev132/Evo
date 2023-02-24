@@ -1,11 +1,7 @@
-import { $ } from "./custom.js";
+import { $ } from "../custom.js";
 export default function createHamburgerSystem() {
-
-
-
-}
-
-{
+    const stopScroll = () => document.body.classList.add('stop-scrolling');
+    const startScroll = () => document.body.classList.remove('stop-scrolling');
     let state = true;
     const hambuger__links = $('.hamburger__link > a');
     const hambuger__menu = $(".hamburger__menu");
@@ -17,12 +13,14 @@ export default function createHamburgerSystem() {
 
             hambuger__menu.style.animationDelay = "";
             hambuger__menu__bg.style.animationDelay = ".2s";
+            stopScroll();
         } else {
             hambuger__menu.setAttribute('class', 'hamburger__menu hamburger--animation--close');
             hambuger__menu__bg.setAttribute('class', 'hamburger__menu__bg hamburger--animation--close');
 
             hambuger__menu__bg.style.animationDelay = "";
             hambuger__menu.style.animationDelay = ".2s";
+            startScroll();
         }
     }
 
@@ -93,5 +91,8 @@ export default function createHamburgerSystem() {
         for (let i = 0; i < hambuger__links.length; ++i) {
             hambuger__links[i].classList.remove('hamburger__link--show')
         }
+        startScroll();
     });
+
+
 }

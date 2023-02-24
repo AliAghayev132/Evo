@@ -1,4 +1,4 @@
-{
+export default function createBatmanAnimation() {
     const canvas = document.querySelector('.batmancanvas'),
         ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
@@ -70,5 +70,3 @@
     }
 
 }
-
-

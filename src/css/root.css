@@ -1,8 +1,6 @@
 /* Header__location 42px 60px */
 
 @import './components/icons.css';
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
-
 @font-face {
     font-family: 'Space Mono';
     src: url('../fonts/SpaceMono-Bold.ttf');
@@ -28,6 +26,7 @@
 }
 
 :root {
+    --topmargin:"102px";
     --fontcode: 'Francois One';
     --fontcode2: 'Gillroy';
     --fontcode3: 'Space Mono';
@@ -217,4 +216,9 @@ input::-webkit-inner-spin-button {
 
 .fa-chevron-right::before {
     content: "\f054";
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
 }

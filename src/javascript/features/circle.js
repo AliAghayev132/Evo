@@ -1,6 +1,6 @@
-import { $, random } from "./custom.js";
+import { $, random } from "../custom.js";
 
-(function () {
+export default function createCircleAnimation() {
     function initCircles() {
         circles = [];
         while (circlesSizes--)
@@ -105,4 +105,4 @@ import { $, random } from "./custom.js";
     checkSizes();
     initCircles();
     animate();
-})();
+};

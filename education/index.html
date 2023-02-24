@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tədris</title>
     <link rel="stylesheet" href="../src/css/education.css">
+    <link rel="shortcut icon" type="image/jpg" href="../src/images/logo.svg" />
 </head>
 
-<body>
+<body class="preload">
     <header>
         <div class="header__location">
             <span>
@@ -18,25 +19,25 @@
         </div>
         <nav class="header__nav">
             <div class="nav__left">
-                <a class="logo" href="/"><img src="./src/images/logo.svg" /></a>
+                <a class="logo" href="/"><img src="../src/images/logo.svg" /></a>
             </div>
             <div class="nav__mid">
                 <ul class="header__nav__links">
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="../">Ana səhifə</a>
+                        <a class="header__nav__link" href="/">Ana səhifə</a>
                         <!-- Thank You Azad 05.02.2023 | 01:52 | -->
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link">Tədris</a>
+                        <a class="header__nav__link" href="">Tədris</a>
                     </li>
                     <li class="header__nav__item">
                         <a class="header__nav__link" href="../vacancy/">Vakansiyalar</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="#">Haqqımızda</a>
+                        <a class="header__nav__link" href="../about/">Haqqımızda</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="#">Əlaqə</a>
+                        <a class="header__nav__link" href="../contact/">Əlaqə</a>
                     </li>
                 </ul>
             </div>
@@ -60,11 +61,11 @@
         <div class="hamburger__menu">
             <div class="hamburger__menu__bg">
                 <div class="hamburger__link">
-                    <a class="">Ana Səhifə</a>
-                    <a class="" href="./education/">Tədris</a>
-                    <a class="" href="./vacancy/">Vakansiyalar</a>
-                    <a class="" href="./about/">Haqqımızda</a>
-                    <a class="" href="./contact/">Əlaqə</a>
+                    <a href="/">Ana Səhifə</a>
+                    <a href="">Tədris</a>
+                    <a href="../vacancy/">Vakansiyalar</a>
+                    <a href="../about/">Haqqımızda</a>
+                    <a href="../contact/">Əlaqə</a>
                     <div class="hamburger__icons">
                         <a href="https://www.facebook.com/orderhub.az/">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -93,73 +94,112 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </button>
                     <ul class="education__list">
-                        <li style="--color:var(--evo--color)" class="catogory__element">
+                        <li style="--color:var(--card-color1)" class="catogory__element">
                             <span>
                                 Veb Proqramlaşdırma
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
+                            <div class="rightmenu">
+                                <div style="--color:var(--card-color2)" class="rightmenu__element">
+                                    <span>
+                                        Front End (React)
+                                    </span>
+                                </div>
+                                <div style="--color:var(--card-color3)" class="rightmenu__element">
+                                    <span>
+                                        Front End (Angular)
+                                    </span>
+                                </div>
+                                <div style="--color:var(--card-color4)" class="rightmenu__element">
+                                    <span>
+                                        Back End (C#)
+                                    </span>
+                                </div>
+                                <div style="--color:var(--card-color5)" class="rightmenu__element">
+                                    <span>
+                                        Back End (Java)
+                                    </span>
+                                </div>
+                                <div style="--color:var(--card-color6)" class="rightmenu__element">
+                                    <span>
+                                        Back End (Python)
+                                    </span>
+                                </div>
+                            </div>
                         </li>
-                        <li style="--color:var(--card-color1)" class="catogory__element">
+                        <li style="--color:var(--card-color2)" class="catogory__element">
                             <span>
                                 Mobil Proqramlaşdırma
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
+                            <div class="rightmenu">
+                                <div style="--color:var(--card-color3)" class="rightmenu__element">
+                                    <span>
+                                        Flutter Dart
+                                    </span>
+                                </div>
+                                <div style="--color:var(--card-color4)" class="rightmenu__element">
+                                    <span>
+                                        React Native
+                                    </span>
+                                </div>
+                            </div>
                         </li>
-                        <li style="--color:var(--card-color2)" class="catogory__element">
+                        <li style="--color:var(--card-color3)" class="catogory__element">
                             <span>
                                 Oyun Proqramlaşdırma
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color3)" class="catogory__element">
+                        <li style="--color:var(--card-color4)" class="catogory__element">
                             <span>
                                 Kiber Təhlükəsizlik
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color4)" class="catogory__element">
+                        <li style="--color:var(--card-color5)" class="catogory__element">
                             <span>
                                 IT və Helpdesk
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color1)" class="catogory__element">
+                        <li style="--color:var(--card-color6)" class="catogory__element">
                             <span>
                                 Qrafik Dizayn
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color2)" class="catogory__element">
+                        <li style="--color:var(--card-color7)" class="catogory__element">
                             <span>
                                 İnteryer Dizayn
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color2)" class="catogory__element">
+                        <li style="--color:var(--card-color8)" class="catogory__element">
                             <span>
                                 Extryer Dizayn
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color2)" class="catogory__element">
+                        <li style="--color:var(--card-color9)" class="catogory__element">
                             <span>
                                 QA Testing (Manual)
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color2)" class="catogory__element">
+                        <li style="--color:var(--card-color10)" class="catogory__element">
                             <span>
                                 Motion Dizayn
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color2)" class="catogory__element">
+                        <li style="--color:var(--card-color11)" class="catogory__element">
                             <span>
                                 Veb Dizayn (UX/UI)
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color2)" class="catogory__element">
+                        <li style="--color:var(--card-color12)" class="catogory__element">
                             <span>
                                 3D modelləşdirmə
                             </span>
@@ -213,57 +253,42 @@
         </div>
     </main>
     <footer>
-        <div class="footer__content">
-            <div class="footer__content__row">
-                <div>
-                    <a class="footer__link">
-                        Tədris
-                    </a>
-                    <div class="footer__education__row">
-                        <ul style="text-align: right;" class="footer__education">
-                            <li><a href="#" class="footer__edu__link">Mobil Proqramlaşdırma</a></li>
-                            <li><a href="#" class="footer__edu__link">Veb Proqramlaşdırma</a></li>
-                            <li><a href="#" class="footer__edu__link">Kiber Təhlükəsizlik</a></li>
-                            <li><a href="#" class="footer__edu__link">IT və Helpdesk</a></li>
-                            <li><a href="#" class="footer__edu__link">Veb Proqramlaşdırma</a></li>
-                            <li><a href="#" class="footer__edu__link">Mobil Proqramlaşdırma</a></li>
-                            <li><a href="#" class="footer__edu__link">Oyun Proqramlaşdırma</a></li>
-                            <li><a href="#" class="footer__edu__link">3D modelləşdirmə</a></li>
-                        </ul>
-                        <ul class="footer__education">
-                            <li><a href="#" class="footer__edu__link">Kiber Təhlükəsizlik</a></li>
-                            <li><a href="#" class="footer__edu__link">IT və Help Desk</a></li>
-                            <li><a href="#" class="footer__edu__link">Qrafik Dizayn</a></li>
-                            <li><a href="#" class="footer__edu__link">İnteryer Dizayn</a></li>
-                            <li><a href="#" class="footer__edu__link">Extryer Dizayn</a></li>
-                            <li><a href="#" class="footer__edu__link">QA Testing</a></li>
-                            <li><a href="#" class="footer__edu__link">Motion Dizayn</a></li>
-                            <li><a href="#" class="footer__edu__link">Veb Dizayn</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <div class="footer__map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.4590746003187!2d49.83946631558835!3d40.37651697936988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307da5a4c85e9f%3A0x8b209a8e1ed5eea9!2sAF%20Mall!5e0!3m2!1str!2s!4v1674965524206!5m2!1str!2s"
-                            style="border:0;" height="200px" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
         </div>
-        <div>
-            <div class="footer__contact">
-                <a href="https://www.facebook.com/orderhub.az/" class="footer__contact__link">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="footer__contact__link">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="mailto:aliaghayev132@gmail.com" class="footer__contact__link">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-            </div>
+        <div class="footer__icons">
+            <a class="footer__icon">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a class="footer__icon">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="footer__icon">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a class="footer__icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        <div class="footer__links">
+            <a class="footer__link">
+                Ana Səhifə
+            </a>
+            <a class="footer__link">
+                Tədris
+            </a>
+            <a class="footer__link">
+                Vakansiyalar
+            </a>
+            <a class="footer__link">
+                Haqqımızda
+            </a>
+            <a class="footer__link">
+                Əlaqə
+            </a>
         </div>
         <h5 class="God_of_Site">by Ali Aghayev</h5>
     </footer>
@@ -272,9 +297,9 @@
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
-    <script src="../src/javascript/education.js">
-    </script>
-
+    <div class="scroll"></div>
+    <script type="module" src="../src/javascript/pages/education.js"></script>
+    <script type="module" src="../src/javascript/main.js"></script>
 </body>
 
 </html>
