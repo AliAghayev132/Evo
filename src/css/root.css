@@ -1,5 +1,5 @@
 /* Header__location 42px 60px */
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap');
 @import './components/icons.css';
 @font-face {
     font-family: 'Space Mono';
@@ -27,7 +27,7 @@
 
 :root {
     --topmargin:"102px";
-    --fontcode: 'Francois One';
+    --fontcode: 'Barlow Semi Condensed', sans-serif;
     --fontcode2: 'Gillroy';
     --fontcode3: 'Space Mono';
     --evo--color: #3E57E8;
