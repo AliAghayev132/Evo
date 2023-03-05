@@ -1,13 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/contact.css">
+    <title>Əlaqə</title>
 </head>
-<body>
 
+<body class="preload">
+    <header>
+        <div class="header__location">
+            <span>
+                Ünvan: AF Mall, 3-cü mərtəbə, Səməd Vurğun küç. 34 &nbsp;&nbsp; TEL: (050) 773 34 52
+            </span>
+        </div>
+        <nav class="header__nav">
+            <div class="nav__left">
+                <a class="logo" href="/"><img src="../src/images/logo.svg" /></a>
+            </div>
+            <div class="nav__mid">
+                <ul class="header__nav__links">
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="../">Ana səhifə</a>
+                        <!-- Thank You Azad 05.02.2023 | 01:52 | -->
+                    </li>
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="">Tədris</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="../vacancy">Vakansiyalar</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="../about">Haqqımızda</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="../contact">Əlaqə</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__right">
+                <a href="https://www.facebook.com/orderhub.az/" class="nav__link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=" class="nav__link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/watch?v=DeDekPSCY-E&list=LL&index=27" class="nav__link">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <div class="menu__icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="hamburger__menu">
+            <div class="hamburger__menu__bg">
+                <div class="hamburger__link">
+                    <a href="/">Ana Səhifə</a>
+                    <a href="">Tədris</a>
+                    <a href="../vacancy/">Vakansiyalar</a>
+                    <a href="../about/">Haqqımızda</a>
+                    <a href="../contact/">Əlaqə</a>
+                    <div class="hamburger__icons">
+                        <a href="https://www.facebook.com/orderhub.az/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/evocoding.az?igshid=YmMyMTA2M2Y=">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/watch?v=DeDekPSCY-E&list=LL&index=27">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://goo.gl/maps/19Cmr2pPzbVuCLK5A">
+                            <i class="fa-solid fa-location-pin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="contact">
+            <div class="contact__title">
+                <h2>İndi Başla</h2>
+            </div>
+            <div class="contact__section">
+                <div class="contact__content">
+                    <div class="contact__row">
+                        <form>
+                            <input placeholder="Ad" class="form__input" type="text" id="fname" autocomplete="off"
+                                required>
+                            <input placeholder="Soyad" class="form__input" type="text" id="fsurname" autocomplete="off"
+                                required>
+                            <zdiv class="form__element form__input">
+                                <span>(+994)</span>
+                                <input id="fnumber" style="background-color: transparent;" placeholder="XX-XXX-XX-XX"
+                                    type="number" autocomplete="off" required>
+                            </zdiv>
+                            <input placeholder="Email" class="form__input" type="email" autocomplete="off" required>
+                            <select class="form__input">
+                                <option>Maraqlandığınız Sahə</option>
+                                <option>Front End Proqramlaşdırma</option>
+                                <option>Back End Proqramlaşdırma</option>
+                                <option>Mobil Proqramlaşdırma</option>
+                                <option>Oyun Proqramlaşdırma</option>
+                                <option>Qrafik Dizayn</option>
+                                <option>Interyer Dizayn</option>
+                                <option>Kiber Təhlükəsizlik</option>
+                                <option>Helpdesk</option>
+                            </select>
+                            <button class="form__button">Müraciət et</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="waves">
             <div class="wave" id="wave1"></div>
@@ -48,5 +161,8 @@
         </div>
         <h5 class="God_of_Site">by Ali Aghayev</h5>
     </footer>
+    <script type="module" src="../src/javascript/main.js"></script>
+    <script type="module" src="../src/javascript/pages/contact.js"></script>
 </body>
+
 </html>

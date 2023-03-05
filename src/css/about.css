@@ -47,6 +47,7 @@
 .about__row__content>div {
     width: 50%;
     display: flex;
+    user-select: none;
 }
 
 .about__content__image {
@@ -73,6 +74,7 @@
     width: 90%;
 }
 .about__ending h2{
+    margin-bottom: 300px;
     text-align: center;
     font-size: var(--title-font);
     font-family: var(--fontcode);
