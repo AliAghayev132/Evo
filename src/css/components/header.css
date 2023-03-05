@@ -100,6 +100,7 @@ header {
     position: absolute;
     bottom: -2.5px;
     left: 0;
+    pointer-events: none;
     opacity: 0;
     width: 100%;
     height: 2px;

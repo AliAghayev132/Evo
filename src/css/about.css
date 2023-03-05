@@ -1,0 +1,91 @@
+@import './root.css';
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/background.css';
+
+.about {
+    margin: 0 auto;
+    margin-top: 102px;
+    max-width: 1400px;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+.about__title {
+    text-align: center;
+    font-family: var(--fontcode);
+    font-size: var(--title-font);
+}
+
+.about__content {
+    flex-direction: column;
+    display: flex;
+    padding: 50px 0;
+}
+
+.about__row {
+    transition: .6s;
+    opacity: 0;
+    height: 150vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.about__row__content {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: calc(50% + 102px);
+    max-width: 1400px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__row__content>div {
+    width: 50%;
+    display: flex;
+}
+
+.about__content__image {
+    top: 0;
+    justify-content: center;
+}
+
+.about__content__image>img {
+    object-position: center;
+    object-fit: cover;
+    height: 400px;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.about__content__text {
+    font-size: 2em;
+    justify-content: center;
+    font-family: var(--fontcode3);
+}
+
+.about__content__text>p {
+    text-align: center;
+    width: 90%;
+}
+.about__ending h2{
+    text-align: center;
+    font-size: var(--title-font);
+    font-family: var(--fontcode);
+}
+@media only screen and (max-width: 900px) {
+    .about__row__content{
+        gap: 50px;
+        flex-direction: column;
+    }
+    .about__row__content > div{
+        width: 100%;
+    }
+    .about__row__content{
+        top: 50%;
+    }
+}

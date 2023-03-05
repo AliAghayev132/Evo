@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/index.css">
-    <link rel="shortcut icon" type="image/jpg" href="./src/images/logo.svg"/>
+    <link rel="shortcut icon" type="image/jpg" href="./src/images/logo.svg" />
     <title>Ana Səhifə</title>
 </head>
 
-<body>
+<body class="preload">
     <header>
         <div class="header__location">
             <span>
@@ -28,16 +28,16 @@
                         <!-- Thank You Azad 05.02.2023 | 01:52 | -->
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="./education/">Tədris</a>
+                        <a class="header__nav__link" href="/education/">Tədris</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="./vacancy/">Vakansiyalar</a>
+                        <a class="header__nav__link" href="/vacancy/">Vakansiyalar</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="#">Haqqımızda</a>
+                        <a class="header__nav__link" href="/about/">Haqqımızda</a>
                     </li>
                     <li class="header__nav__item">
-                        <a class="header__nav__link" href="#">Əlaqə</a>
+                        <a class="header__nav__link" href="/contact/">Əlaqə</a>
                     </li>
                 </ul>
             </div>
@@ -110,9 +110,10 @@
                             required>
                         <zdiv class="form__element form__input">
                             <span>(+994)</span>
-                            <input id="fnumber" style="background-color: transparent;" placeholder="XX-XXX-XX-XX" type="number" autocomplete="off" required>
+                            <input id="fnumber" style="background-color: transparent;" placeholder="XX-XXX-XX-XX"
+                                type="number" autocomplete="off" required>
                         </zdiv>
-                        <input  placeholder="Email" class="form__input" type="email" autocomplete="off" required>
+                        <input placeholder="Email" class="form__input" type="email" autocomplete="off" required>
                         <select class="form__input">
                             <option>Maraqlandığınız Sahə</option>
                             <option>Front End Proqramlaşdırma</option>
@@ -146,12 +147,14 @@
         </section>
         <section class="about__section">
             <div class="about__left">
-                <div class="about__title">
-                    Biz kimik ?
-                </div>
-                <div class="about__description">
-                    Sağdaki uzun saç Ali Aghayev.
-                    Solumdaki EVO MMC nin BOSSU.
+                <div class="about__left__texts">
+                    <div class="about__title">
+                        Biz kimik ?
+                    </div>
+                    <div class="about__description">
+                        Artıq 4 ildir fəaliyyət göstərən EVO Coding Center çoxlu sayda proqramçı və dizayner
+                        yetişdirmişdir.
+                    </div>
                 </div>
             </div>
             <div class="about__right">
@@ -334,19 +337,19 @@
             </a>
         </div>
         <div class="footer__links">
-            <a class="footer__link">
+            <a href="/" class="footer__link">
                 Ana Səhifə
             </a>
-            <a class="footer__link">
+            <a href="/education" class="footer__link">
                 Tədris
             </a>
-            <a class="footer__link">
+            <a href="/vacancy/" class="footer__link">
                 Vakansiyalar
             </a>
-            <a class="footer__link">
+            <a href="/about" class="footer__link">
                 Haqqımızda
             </a>
-            <a class="footer__link">
+            <a href="/contact" class="footer__link">
                 Əlaqə
             </a>
         </div>

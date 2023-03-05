@@ -77,12 +77,17 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     display: flex;
     flex-direction: column;
     width: 50%;
 }
-
+.about__left__texts{
+    padding-left: 20%;
+    display: inline-flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+}
 .about__right {
     align-items: center;
     justify-content: center;
@@ -109,7 +114,7 @@
 .about__description {
     text-align: left;
     font-size: 1.5em;
-    width: 70%;
+    width: 80%;
     font-family: var(--fontcode3);
 }
 
@@ -195,6 +200,11 @@
     .about__left,
     .about__right {
         height: auto;
+    }
+    .about__left__texts{
+        align-items: center;
+        justify-content: center;
+        padding: 0;
     }
 
     /* .about__title {
