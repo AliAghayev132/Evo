@@ -11,8 +11,6 @@
 }
 // #endregion
 
-
-
 // #region Index Import
 import createCircleAnimation from "../features/circle.js";
 import createBatmanAnimation from "../features/batman.js";
@@ -22,14 +20,12 @@ createCircleAnimation();
 createBatmanAnimation();
 createCarouselAnimation();
 startDynamicText({
-    className:".home__text",
-    texts:[
-        "Time Is Passing","The Future is Here"
+    className: ".home__text",
+    texts: [
+        "Time Is Passing", "The Future is Here"
     ]
 })
 //#endregion
-
-
 
 {
     const mouse = document.querySelector('.mouse__down');

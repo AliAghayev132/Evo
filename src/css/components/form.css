@@ -11,7 +11,8 @@
     width: 500px;
     font-family: var(--fontcode3);
     font-size: 1em;
-    border: 2px solid black;
+    outline: none;
+    border: 2px solid gainsboro;
     border-radius: 5px;
     outline: none;
     padding: 0 10px;

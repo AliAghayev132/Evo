@@ -282,7 +282,9 @@
 .education__button:nth-child(2) {
     right: 1%;
 }
-
+.education__button{
+    
+}
 .education__title {
     font-family: var(--fontcode);
     font-size: var(--title-font);
@@ -429,9 +431,9 @@
     white-space: nowrap;
     padding: 0 10px;
     gap: 0 10px;
-    border-top: 25px solid var(--card-color1);
-    border-bottom: 25px solid var(--card-color1);
-    border-right: 25px solid transparent;
+    border-top: 26px solid var(--card-color1);
+    border-bottom: 26px solid var(--card-color1);
+    border-right: 26px solid transparent;
     color: white;
 }
 .contact__about__item:nth-child(2){
@@ -460,7 +462,7 @@
 /* #endregion */
 .form__element {
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid gainsboro;
     display: flex;
     padding-left: 5px;
     gap: 10px;
