@@ -3,10 +3,12 @@
 @import './components/footer.css';
 @import './components/background.css';
 @import './components/form.css';
-
-.contact {
-    padding-top: 50px;
+main{
     min-height: 100vh;
+}
+.contact {
+    margin-bottom: 100px;
+    padding-top: 50px;
     margin-top: var(--topmargin);
 }
 
@@ -153,6 +155,22 @@
     color: white;
 }
 
+.map {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.map__title{
+    font-family: var(--fontcode);
+    font-size: var(--title-font);
+    margin-bottom: 50px;
+}
+.map iframe {
+    width: 98%;
+    height: 700px;
+}
+
 @media only screen and (max-width: 930px) {
     .contact__about {
         display: none;
@@ -185,6 +203,7 @@
 .contact {
     margin-top: var(--topmargin);
 }
-.form__element{
+
+.form__element {
     border-color: gainsboro;
 }

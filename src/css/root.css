@@ -84,7 +84,7 @@ body::-webkit-scrollbar {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-
+    
 .scroll {
     z-index: 4;
     position: fixed;
