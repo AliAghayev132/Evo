@@ -261,7 +261,6 @@
 
 .education__section {
     position: relative;
-    background-color: var(--bg-color1);
     padding: 50px 0;
 }
 
@@ -282,9 +281,6 @@
 .education__button:nth-child(2) {
     right: 1%;
 }
-.education__button{
-    
-}
 .education__title {
     font-family: var(--fontcode);
     font-size: var(--title-font);
@@ -297,14 +293,14 @@
     max-width: 260px;
     width: 100%;
     display: inline-block;
-    background-color: white;
+    /* background-color: white; */
     transition: .3s;
     border-radius: 10px;
     text-align: center;
     padding: 20px;
     position: relative;
     overflow: hidden;
-}
+} 
 
 .education__slide {
     justify-content: center;

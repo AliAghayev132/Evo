@@ -6,6 +6,7 @@
 main {
     padding-top: 110px;
 }
+
 .education__section {
     align-items: center;
     display: flex;
@@ -15,8 +16,9 @@ main {
     min-height: 100vh;
     padding-bottom: 20px;
 }
+
 .education__input {
-    width: 60%;
+    width: 100%;
     min-width: 300px;
     height: 45px;
     padding: 0 10px;
@@ -33,6 +35,8 @@ main {
 }
 
 .education__content {
+    justify-content: center;
+    width: 100%;
     padding: 0 10px;
     display: flex;
     gap: 15px;
@@ -45,7 +49,10 @@ main {
     width: 300px;
     border-bottom: none;
 }
-
+[data-button="catagory__button"] span{
+    pointer-events: none;
+    user-select: none;
+}
 .education__list {
     border: 2px solid rgb(122, 122, 122);
     border-bottom: none;
@@ -68,10 +75,12 @@ main {
     transition: .15s ease background-color;
 
 }
-.catogory__element:hover .rightmenu{
+
+.catogory__element:hover .rightmenu {
     width: 100%;
 }
-.rightmenu{
+
+.rightmenu {
     background-color: white;
     overflow: hidden;
     width: 0;
@@ -81,13 +90,15 @@ main {
     position: absolute;
     transition: .3s ease width;
 }
-.rightmenu__element:nth-child(1){
+
+.rightmenu__element:nth-child(1) {
     border-top: 2px solid rgb(122, 122, 122);
 }
-.rightmenu__element{
+
+.rightmenu__element {
     background-color: transparent;
     width: 100%;
-    font-family: var(--fontcode); 
+    font-family: var(--fontcode);
     cursor: pointer;
     font-size: 20px;
     padding: 15px 10px;
@@ -95,7 +106,8 @@ main {
     border-right: 2px solid rgb(122, 122, 122);
     transition: .15s ease background-color;
 }
-.rightmenu__element:hover{
+
+.rightmenu__element:hover {
     background-color: var(--color);
     color: white;
 }
@@ -104,28 +116,38 @@ main {
     transition: .2s ease padding;
     display: inline-block;
 }
+
 .catogory__element:hover {
     background-color: var(--color);
 }
-.catogory__element:hover > span,.catogory__element:hover > i{
+
+.catogory__element:hover>span,
+.catogory__element:hover>i {
     color: white;
 }
-.catogory__element:hover > span {
+
+.catogory__element:hover>span {
     padding-left: 10px;
 }
+
 .education__cards {
-    max-width: 800px;
-}
-.education__card {
     flex-direction: column;
     display: flex;
-    margin-bottom: 20px;
+    gap: 5px;
+    width: 65%;
+}
+
+.education__card {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
     padding: 20px;
     overflow: hidden;
-    max-height: 400px;
+    min-height: 400px;
     border-radius: 12px;
     border: 1px solid rgb(122, 122, 122);
 }
+
 .education__card__description {
     font-size: 1.25em;
     font-family: monospace;
@@ -133,11 +155,13 @@ main {
     margin-bottom: 10px;
     height: 70%;
 }
+
 .education__card__title {
     font-size: 2em;
     font-family: var(--fontcode);
     margin-bottom: 15px;
 }
+
 .eduication__card__additional {
     display: flex;
     justify-content: space-between;
@@ -149,15 +173,40 @@ main {
     font-size: 1.25em;
     font-family: var(--fontcode3);
 }
+.selected__catagory__remove{
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    background: none;
+    width: 28px;
+    font-size: 16px;
+    border: 2px solid transparent;
+}
+.selected__catagory__remove > .fa-xmark{
+    pointer-events: none;
+    color: rgb(251, 72, 72)!important;
+}
+.selected__catagory__remove:hover{
+    border-color: red;
+    cursor: pointer;
+    background-color: red;
+}
+.selected__catagory__remove:hover i {
+    color: white!important;
+}
 .eduication__card__additional--left>span:nth-child(1) {
     padding-left: 0;
 }
+
 .eduication__card__additional--left>span {
     padding: 0 10px;
     text-align: center;
     display: inline-block;
     border-right: 3px solid black;
 }
+
 .eduication__card__additional--right button {
     font-size: 1.5em;
     font-family: var(--fontcode3);
@@ -207,16 +256,36 @@ main {
     border-color: red;
 }
 
-
+.education__input__container{
+    position: relative;
+    width: 60%;
+}
+.selected__catagory{
+    text-transform: capitalize;
+    padding: 3px 14px;
+    border: 2px solid rgba(128, 128, 128, 0.156);
+    border-radius: 7px;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-family: var(--fontcode);
+    transform: translateY(-50%);
+    top: 50%;
+    right: 20px;
+    position: absolute;
+}
 
 @media only screen and (max-width: 900px) {
-    .education__card {
-        margin: 0 auto;
+    .education__card__description{
+        height: 200px;
     }
-
     .education__cards {
         justify-content: center;
         align-items: center;
+        width: 90%;
         padding: 10px;
     }
 
@@ -252,8 +321,7 @@ main {
     .education__catagories {
         width: 100%;
     }
-
-    .education__input {
+    .education__input__container{
         width: 80%;
     }
 

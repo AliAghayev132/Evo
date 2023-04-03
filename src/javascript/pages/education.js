@@ -24,46 +24,66 @@
 }
 
 
-
 {
+    let selectedCatagory = "";
     let courses = [
         {
             title: "Front End React",
-            content: "Front End Olmaq istəyənlər gələ bilər React"
-        },
-        {
-            title: "Front End Angular",
-            content: "Front End Olmaq istəyənlər gələ bilər Angular"
-
-        },
-        {
-            title: "Front End Vue",
-            content: "Front End Olmaq istəyənlər gələ bilər Vue"
+            content: "Front End Olmaq istəyənlər gələ bilər React",
+            keywords: [
+                'frontend', 'front', 'veb', 'web', 'veb proqramlaşdırma', 'kodlaşdırma', 'react', 'javascript', 'sayt'
+            ],
+            type: [
+                'veb', 'react'
+            ]
         },
         {
             title: "Back End C#",
-            content: "Back End Olmaq istəyənlər gələ bilər Vue"
+            content: "Back End Olmaq istəyənlər gələ bilər Vue",
+            keywords: [
+                'backend', 'back end', 'back', 'veb', 'web', 'veb proqramlaşdırma', 'kodlaşdırma', 'c#', 'sayt'
+            ],
+            type: [
+                'veb', 'c#'
+            ]
         },
         {
             title: "Back End Java",
-            content: "Back End Olmaq istəyənlər gələ bilər Vue"
-        },
-        {
-            title: "Grafik Dizayn",
-            content: "Salam Mən Gəldim"
+            content: "Back End Olmaq istəyənlər gələ bilər Vue",
+            keywords: [
+                'backend', 'back end', 'back', 'veb', 'web', 'veb proqramlaşdırma', 'kodlaşdırma', 'java', 'sayt'
+            ],
+            type: [
+                'veb', 'java'
+            ]
         },
     ]
-
-
-
+    const checkKeyWords = (key, keywords) => {
+        for (let i of keywords)
+            if (i.includes(key))
+                return true;
+        return false;
+    }
     const feducation = document.getElementById('feducation');
     const cards = document.querySelector('.education__cards');
-    feducation.addEventListener('input', (e) => {
+    const inputContainer = document.querySelector('.education__input__container');
+    feducation.addEventListener('input', e => {
         cards.innerHTML = "";
-        for(let i = 0;i<courses.length;++i){
-            if(courses[i].title.includes(e.target.value)){
-                cards.innerHTML += 
-                `
+        refrestCards(e.target.value);
+    })
+    function refrestCards(value) {
+        cards.innerHTML = '';
+        for (let i = 0; i < courses.length; ++i) {
+            console.log(selectedCatagory);
+            if (
+                (courses[i].title.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+                    ||
+                    checkKeyWords(value.toLocaleLowerCase(), courses[i].keywords))
+                &&
+                (selectedCatagory !== "" ? courses[i].type.includes(selectedCatagory) : true)
+            ) {
+                cards.innerHTML +=
+                    `
                 <div class="education__card">
                 <h3 class="education__card__title">
                     ${courses[i].title}
@@ -89,10 +109,37 @@
                         </button>
                     </div>
                 </div>
-            </div>
+                </div>
                 
                 `
             }
         }
+    }
+    document.addEventListener('click', ({ target }) => {
+        if (target.getAttribute('data-button') === 'catagory__button') {
+            if (document.querySelector('.selected__catagory'))
+                document.querySelector('.selected__catagory').remove();
+            selectedCatagory = target.getAttribute('data-catagory');
+            inputContainer.innerHTML +=
+                `
+            <span class="selected__catagory">
+                ${selectedCatagory}
+                <button class="selected__catagory__remove">
+                    <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+                </button>
+            </span>
+            `
+            refrestCards(feducation.value);
+        } else if (target.classList.contains('selected__catagory__remove')) {
+            document.querySelector('.selected__catagory').remove();
+            selectedCatagory = "";
+            refrestCards(feducation.value);
+
+        }
     })
 }
+
+
+
+
+

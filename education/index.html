@@ -86,7 +86,9 @@
     </header>
     <main>
         <section class="education__section">
-            <input class="education__input" type="text" id="feducation" placeholder="Axtar">
+            <div class="education__input__container">
+                <input class="education__input" type="text" id="feducation" placeholder="Axtar">
+            </div>
             <div class="education__content">
                 <div class="education__catagories">
                     <button class="education__hamburger">
@@ -94,13 +96,13 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </button>
                     <ul class="education__list">
-                        <li style="--color:var(--card-color1)" class="catogory__element">
+                        <li data-catagory="veb" data-button="catagory__button" style="--color:var(--card-color1)" class="catogory__element">
                             <span>
                                 Veb Proqramlaşdırma
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                             <div class="rightmenu">
-                                <div style="--color:var(--card-color2)" class="rightmenu__element">
+                                <div data-catagory="react" data-button="catagory__button" style="--color:var(--card-color2)" class="rightmenu__element">
                                     <span>
                                         Front End (React)
                                     </span>
@@ -110,24 +112,24 @@
                                         Front End (Angular)
                                     </span>
                                 </div> -->
-                                <div style="--color:var(--card-color4)" class="rightmenu__element">
+                                <div data-catagory="c#" data-button="catagory__button" style="--color:var(--card-color4)" class="rightmenu__element">
                                     <span>
                                         Back End (C#)
                                     </span>
                                 </div>
-                                <div style="--color:var(--card-color5)" class="rightmenu__element">
+                                <div data-catagory="java" data-button="catagory__button" style="--color:var(--card-color5)" class="rightmenu__element">
                                     <span>
                                         Back End (Java)
                                     </span>
                                 </div>
-                                <div style="--color:var(--card-color6)" class="rightmenu__element">
+                                <div  data-catagory="python" data-button="catagory__button" style="--color:var(--card-color6)" class="rightmenu__element">
                                     <span>
                                         Back End (Python)
                                     </span>
                                 </div>
                             </div>
                         </li>
-                        <li style="--color:var(--card-color2)" class="catogory__element">
+                        <li data-catagory="mobile" data-button="catagory__button" style="--color:var(--card-color2)" class="catogory__element">
                             <span>
                                 Mobil Proqramlaşdırma
                             </span>
@@ -138,14 +140,14 @@
                                         Flutter Dart
                                     </span>
                                 </div> -->
-                                <div style="--color:var(--card-color4)" class="rightmenu__element">
+                                <div data-catagory="react-native" data-button="catagory__button" style="--color:var(--card-color4)" class="rightmenu__element">
                                     <span>
                                         React Native
                                     </span>
                                 </div>
                             </div>
                         </li>
-                        <li style="--color:var(--card-color3)" class="catogory__element">
+                        <li data-catagory="game" data-button="catagory__button" style="--color:var(--card-color3)" class="catogory__element">
                             <span>
                                 Oyun Proqramlaşdırma
                                 
@@ -164,25 +166,25 @@
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li> -->
-                        <li style="--color:var(--card-color6)" class="catogory__element">
+                        <li data-catagory="graphic" data-button="catagory__button" style="--color:var(--card-color6)" class="catogory__element">
                             <span>
                                 Qrafik Dizayn
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color11)" class="catogory__element">
+                        <li data-catagory="ui" data-button="catagory__button" style="--color:var(--card-color11)" class="catogory__element">
                             <span>
                                 Veb Dizayn (UX/UI)
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color7)" class="catogory__element">
+                        <li data-catagory="interior" data-button="catagory__button" style="--color:var(--card-color7)" class="catogory__element">
                             <span>
                                 İnteryer Dizayn
                             </span>
                             <i class="fa-solid fa-caret-right"></i>
                         </li>
-                        <li style="--color:var(--card-color8)" class="catogory__element">
+                        <li data-catagory="exterior" data-button="catagory__button" style="--color:var(--card-color8)" class="catogory__element">
                             <span>
                                 Extryer Dizayn
                             </span>
