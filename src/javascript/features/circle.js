@@ -105,4 +105,4 @@ export default function createCircleAnimation() {
     checkSizes();
     initCircles();
     animate();
-};
+}
